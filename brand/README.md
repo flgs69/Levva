@@ -4,7 +4,7 @@
 
 A Levva instala estúdios compactos dentro de shoppings e transforma compras reais em vídeos prontos para as lojas usarem, e cada gravação em aprendizado sobre como os clientes enxergam os produtos. É o nome atual do projeto que antes se chamou LiveHub e MONI. Este sistema herda a base visual do design system MONI e troca o nome, o símbolo e a animação.
 
-Brand book visual: `brandbook.html` nesta pasta, publicado em https://claude.ai/artifact/KgTwNiUxqhd6HtEUdrATyw. Design system no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
+Brand Guide completo (17 capítulos, da estratégia à governança): `brand-guide.html` nesta pasta, publicado em https://claude.ai/artifact/PWT5gnq7ianwrybqev57SJ. Brand book visual resumido: `brandbook.html`, publicado em https://claude.ai/artifact/KgTwNiUxqhd6HtEUdrATyw. Design system no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
 
 ## O que a Levva faz
 
@@ -90,7 +90,8 @@ Mantidos: paleta, tipografia, bordas de 2 px, sombra chapada, pílulas, voz dire
 ## Arquivos
 
 - `SKILL.md`: skill levva-design, para gerar telas e peças com a marca.
-- `brandbook.html`: brand book completo (abra no navegador).
+- `brand-guide.html`: Brand Guide completo, com essência, público, mensagem, voz, kit de vídeo, estúdios, parceiros e governança (abra no navegador).
+- `brandbook.html`: brand book visual resumido.
 - `logos/`: 12 versões em SVG, ver `logos/README.md`.
 - `animacao/`: vídeos MP4 1920 x 1080, SVG animado e página HTML da animação.
 - `tokens.json` e `tokens.css`: cores (claro e escuro), tipografia, espaço, raios, sombras, bordas, durações.

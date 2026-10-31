@@ -6,7 +6,7 @@ user-invocable: true
 
 # Levva: skill de design
 
-Leia `README.md` nesta pasta antes de criar qualquer coisa. Ele é o livro de marca em texto. O brand book visual está em `brandbook.html`.
+Leia `README.md` nesta pasta antes de criar qualquer coisa. Ele é o livro de marca em texto. O guia completo, com mensagem, voz por situação, kit de vídeo, estúdios, co-branding e checklist de publicação, está em `brand-guide.html`.
 
 ## Arquivos
 

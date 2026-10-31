@@ -1,6 +1,6 @@
 # Logos
 
-Cores fixas nos arquivos: tinta #1A1210, coral #FF4433, papel #FFFAF5.
+Cores fixas nos arquivos: tinta #1A1210, coral #FF4433, papel #FFFAF5. A palavra é "levva." com "a" de um andar e ponto final coral; na versão monocromática o ponto final segue a cor da palavra.
 
 - `levva-lockup.svg`: assinatura principal, tinta com ponto coral. Sobre paper. Mínimo 96 px.
 - `levva-lockup-paper.svg`: negativa, papel com ponto coral. Sobre ink ou foto escura.

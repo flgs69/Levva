@@ -33,7 +33,7 @@ Direta, real, enérgica, responsável. "Você" para o consumidor e para o lojist
 
 ## Logo
 
-O símbolo é um visor de câmera: dois cantos de enquadramento e um ponto coral de gravação no centro. O canto de baixo é um L, de Levva. A palavra "levva" vem em Bricolage Grotesque ExtraBold, caixa baixa.
+O símbolo é um visor de câmera: dois cantos de enquadramento e um ponto coral de gravação no centro. O canto de baixo é um L, de Levva. A palavra "levva" vem em Bricolage Grotesque ExtraBold, caixa baixa, com o "a" de um andar só (ponta arredondada, como os cantos do visor) e um ponto final coral: o mesmo ponto de gravação do símbolo fechando a palavra. Na versão monocromática, o ponto final segue a cor da palavra.
 
 - Construção em grade de 100: traço dos cantos 9, raio 16 (`radius-lg`), ponto com diâmetro 24 no centro exato. Na assinatura, a altura do "l" é 76 e o espaço entre símbolo e palavra é 22.
 - Área de proteção: o diâmetro do ponto (24 em 100) em volta de qualquer versão.
@@ -45,7 +45,7 @@ Os arquivos e o uso de cada um estão no grupo Logos.
 
 ## Animação da logo
 
-"Enquadra, grava, assina." Os cantos entram pelas diagonais (0 a 520 ms), o ponto acende com um leve estouro (380 a 720 ms), as letras sobem uma a uma a cada 70 ms (560 a 1300 ms) e o ponto pisca duas vezes como luz de gravação (900 a 2100 ms). Total de 2,1 s (`duration-logo`), curva ease-snap `cubic-bezier(.2, .8, .2, 1)`, sem quique.
+"Enquadra, grava, assina." Os cantos entram pelas diagonais (0 a 520 ms), o ponto acende com um leve estouro (380 a 720 ms), as letras sobem uma a uma a cada 70 ms (560 a 1300 ms) o ponto final acende por último (1320 a 1660 ms) e o ponto do símbolo pisca duas vezes como luz de gravação (900 a 2100 ms). Total de 2,1 s (`duration-logo`), curva ease-snap `cubic-bezier(.2, .8, .2, 1)`, sem quique.
 
 Toca uma vez e para; nunca em loop na interface. Com "reduzir movimento" ativo, mostre a logo parada. Usos: abertura e fechamento de vídeos, carregamento do app, telas do estúdio, início de apresentações. Vídeos e SVG animado no grupo Movimento; o card LogoAnimation mostra a animação ao vivo.
 
@@ -69,7 +69,8 @@ Bricolage Grotesque (`display`) para títulos curtos e números grandes, Inter (
 
 ## Elementos gráficos
 
-- Borda de 2 px em tinta (`border-width`) em cartões, campos, botões contornados e modais.
+- Botões no estilo Apple: preenchimento chapado, sem borda e sem sombra, cápsula (`radius-pill`), Inter 600. Principal em `coral` com texto `on-coral`; secundário em tinta a 8%. Pressionado escurece 14% e reduz para 98%.
+- Borda de 2 px em tinta (`border-width`) em cartões, campos e modais.
 - Sombra chapada sem desfoque (`shadow-flat-sm/md/lg`). A suave (`shadow-soft`) só em tabelas e superfícies densas.
 - Moldura de visor: os dois cantos do símbolo enquadram títulos, fotos e telas, sempre na diagonal canto inferior esquerdo e superior direito.
 - Padrão de visores: o símbolo em grade, tinta sobre coral ou papel sobre tinta. Nunca atrás de texto pequeno.
@@ -88,7 +89,9 @@ Mantidos: paleta, tipografia, bordas de 2 px, sombra chapada, pílulas, voz dire
 
 ## Arquivos
 
+- `SKILL.md`: skill levva-design, para gerar telas e peças com a marca.
 - `brandbook.html`: brand book completo (abra no navegador).
 - `logos/`: 12 versões em SVG, ver `logos/README.md`.
 - `animacao/`: vídeos MP4 1920 x 1080, SVG animado e página HTML da animação.
 - `tokens.json` e `tokens.css`: cores (claro e escuro), tipografia, espaço, raios, sombras, bordas, durações.
+- `exploracao/`: comparativos de fontes, do "a" e de botões usados para decidir a marca.

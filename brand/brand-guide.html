@@ -22,6 +22,8 @@
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(.2, .8, .2, 1);
   --side: 264px;
+  --hair: rgba(26, 18, 16, .09); --fill: rgba(26, 18, 16, .05);
+  --lift: 0 1px 2px rgba(26, 18, 16, .04), 0 10px 30px rgba(26, 18, 16, .07);
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 72px; }
@@ -41,12 +43,12 @@ h4 { font: 700 16px/1.3 var(--font-body); }
 
 /* estrutura */
 .shell { display: grid; grid-template-columns: var(--side) minmax(0, 1fr); min-height: 100%; }
-.side { position: sticky; top: 0; height: 100vh; overflow-y: auto; border-right: 2px solid var(--ink); background: var(--paper); padding: 24px 16px 32px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; gap: 18px; }
+.side { position: sticky; top: 0; height: 100vh; overflow-y: auto; border-right: 1px solid var(--hair); background: var(--paper); padding: 24px 16px 32px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; gap: 12px; }
 .side .brand svg { width: 132px; height: auto; display: block; }
 .side .ver { font: 500 12px var(--font-mono); color: var(--ink-muted); }
 .nav { display: flex; flex-direction: column; gap: 2px; }
-.nav .grp { font: 700 11px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-muted); margin: 14px 10px 6px; }
-.nav a { display: flex; gap: 10px; align-items: baseline; text-decoration: none; color: var(--ink); font: 500 14px/1.2 var(--font-body); padding: 8px 10px; border-radius: 10px; }
+.nav .grp { font: 700 11px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-muted); margin: 12px 10px 4px; }
+.nav a { display: flex; gap: 10px; align-items: baseline; text-decoration: none; color: var(--ink); font: 500 14px/1.2 var(--font-body); padding: 6px 10px; border-radius: 10px; }
 .nav a .n { font: 500 11px var(--font-mono); color: var(--ink-muted); min-width: 18px; }
 .nav a:hover { background: rgba(26, 18, 16, .06); }
 .nav a[aria-current="page"] { background: var(--ink); color: var(--paper); }
@@ -60,7 +62,7 @@ h4 { font: 700 16px/1.3 var(--font-body); }
 .sec { margin-top: 56px; }
 .sec > h3 { margin-bottom: 8px; }
 .sec > p.muted { margin-top: 0; }
-.pager { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 72px; padding-top: 24px; border-top: 2px solid var(--ink); }
+.pager { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--hair); }
 .pager a { text-decoration: none; color: var(--ink); display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(26, 18, 16, .06); min-width: 0; }
 .pager a:hover { background: rgba(26, 18, 16, .1); }
 .pager a span { font: 700 11px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-muted); }
@@ -70,7 +72,7 @@ h4 { font: 700 16px/1.3 var(--font-body); }
 @media (max-width: 900px) {
   .shell { grid-template-columns: minmax(0, 1fr); }
   body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
-  .side { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; height: auto; border-right: 0; border-bottom: 2px solid var(--ink); flex-direction: row; align-items: center; gap: 14px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); overflow: visible; }
+  .side { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; height: auto; border-right: 0; border-bottom: 1px solid var(--hair); flex-direction: row; align-items: center; gap: 14px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); overflow: visible; }
   .side .brand svg { width: 84px; }
   .side .ver, .nav .grp { display: none; }
   .nav { flex-direction: row; overflow-x: auto; scrollbar-width: none; min-width: 0; }
@@ -85,8 +87,8 @@ h4 { font: 700 16px/1.3 var(--font-body); }
 .g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
 .g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
 .g4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
-.card { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; min-width: 0; }
-.card.flat { box-shadow: 4px 4px 0 var(--ink); }
+.card { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 20px; padding: 24px; min-width: 0; }
+.card.flat { box-shadow: var(--lift); border-color: transparent; }
 .card.dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .card.dark .muted { color: var(--ink-soft); }
 .card.coral { background: var(--coral); }
@@ -105,7 +107,7 @@ h4 { font: 700 16px/1.3 var(--font-body); }
 .rec { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--paper); font: 500 13px/1 var(--font-mono); letter-spacing: .04em; }
 .rec i { width: 9px; height: 9px; border-radius: 50%; background: var(--coral); animation: blink 1.2s steps(1) infinite; }
 @keyframes blink { 50% { opacity: .2; } }
-.tablewrap { overflow-x: auto; border: 2px solid var(--ink); border-radius: 16px; background: var(--paper-raised); }
+.tablewrap { overflow-x: auto; border: 1px solid var(--hair); border-radius: 16px; background: var(--paper-raised); }
 table { border-collapse: collapse; width: 100%; font-size: 15px; }
 th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
@@ -142,13 +144,13 @@ td.yes::before { content: "Sim "; }
 /* capa */
 .hero { background: var(--paper); }
 .hero .stage svg { width: min(100%, 760px); height: auto; display: block; margin: 8px 0 40px; }
-.facts { display: grid; gap: 1px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); background: var(--ink); border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; margin-top: 40px; }
+.facts { display: grid; gap: 1px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); background: var(--hair); border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; margin-top: 40px; }
 .facts div { background: var(--paper-raised); padding: 18px; }
 .facts b { display: block; font: 800 28px/1 var(--font-display); letter-spacing: -.02em; }
 .facts span { font-size: 14px; color: var(--ink-muted); }
 .quick { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
-.quick a { text-decoration: none; color: var(--ink); background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; gap: 4px; min-width: 0; }
-.quick a:hover { background: var(--coral-soft); }
+.quick a { text-decoration: none; color: var(--ink); background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 16px; padding: 18px; display: grid; gap: 4px; min-width: 0; }
+.quick a:hover { background: var(--paper-raised); box-shadow: var(--lift); }
 .quick a b { font: 700 18px/1.2 var(--font-display); }
 .quick a span { font-size: 14px; color: var(--ink-muted); }
 
@@ -168,29 +170,30 @@ td.yes::before { content: "Sim "; }
 
 /* logo */
 .tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
-.tile { border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: var(--paper-raised); min-width: 0; }
+.tile { border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; background: var(--paper-raised); min-width: 0; }
 .tile .art { flex: 1; min-height: 160px; display: grid; place-items: center; padding: 26px; position: relative; }
 .tile .art svg { width: 100%; max-width: 230px; height: auto; }
 .tile .art svg.sq { max-width: 92px; }
-.tile .cap { border-top: 2px solid var(--ink); padding: 12px 16px; font-size: 14px; }
+.tile .cap { border-top: 1px solid var(--hair); padding: 12px 16px; font-size: 14px; }
 .tile .cap b { display: block; font-weight: 600; }
 .tile .cap span { color: var(--ink-muted); font-size: 13px; }
 .bg-paper { background: var(--paper); } .bg-ink { background: var(--ink); } .bg-coral { background: var(--coral); } .bg-gold { background: var(--gold); }
 .x { position: absolute; top: 10px; left: 10px; width: 26px; height: 26px; border-radius: 50%; background: var(--danger); display: grid; place-items: center; }
 .x svg { width: 11px !important; height: 11px; }
-.diagram { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; padding: 20px; overflow-x: auto; }
+.diagram { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 16px; padding: 20px; overflow-x: auto; }
 .diagram svg { display: block; width: 100%; min-width: 560px; height: auto; }
 .diagram text { font: 500 11px var(--font-mono); fill: var(--ink-muted); }
+.diagram g[style] text { font: inherit; fill: inherit; }
 
 /* cores */
 .sw-row { display: grid; gap: 14px; grid-template-columns: 2fr 1fr 1fr; }
 @media (max-width: 760px) { .sw-row { grid-template-columns: 1fr 1fr; } .sw-row .sw:first-child { grid-column: 1 / -1; } }
-.sw { border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.sw { border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
 .sw .c { min-height: 130px; padding: 16px; display: flex; align-items: flex-end; font: 800 24px/1 var(--font-display); }
 .sw-row .sw:first-child .c { min-height: 210px; font-size: 38px; }
-.sw .i { background: var(--paper-raised); padding: 12px 16px; font-size: 13px; border-top: 2px solid var(--ink); display: grid; gap: 2px; }
+.sw .i { background: var(--paper-raised); padding: 12px 16px; font-size: 13px; border-top: 1px solid var(--hair); display: grid; gap: 2px; }
 .sw .i .mono { font-size: 12px; }
-.ratio { display: flex; height: 60px; border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; }
+.ratio { display: flex; height: 60px; border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; }
 .ratio div { display: flex; align-items: center; padding: 0 12px; font: 500 12px var(--font-mono); white-space: nowrap; overflow: hidden; }
 
 /* tipografia */
@@ -201,7 +204,7 @@ td.yes::before { content: "Sim "; }
 
 /* vídeo */
 .phones { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
-.ph { aspect-ratio: 9 / 16; border-radius: 22px; background: #3a2f2c; position: relative; overflow: hidden; container-type: inline-size; border: 2px solid var(--ink); }
+.ph { aspect-ratio: 9 / 16; border-radius: 22px; background: #3a2f2c; position: relative; overflow: hidden; container-type: inline-size; border: 1px solid var(--hair); }
 .ph .shot { position: absolute; inset: 0; background: radial-gradient(circle at 50% 38%, #6b5f5b 0 18%, transparent 19%), linear-gradient(#4a3d39, #2a201d); }
 .ph .safe { position: absolute; left: 5.5%; right: 5.5%; top: 11.5%; bottom: 21.8%; border: 1.5px dashed rgba(251, 243, 234, .55); border-radius: 6px; }
 .ph .lt { position: absolute; left: 7%; bottom: 25%; display: grid; gap: 1.5cqi; }
@@ -225,14 +228,14 @@ td.yes::before { content: "Sim "; }
 .uirow { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .field { display: grid; gap: 6px; min-width: 0; }
 .field label { font: 600 14px var(--font-body); }
-.field input { font: 400 16px var(--font-body); height: 48px; padding: 0 14px; border: 2px solid var(--ink); border-radius: 12px; background: var(--paper-raised); color: var(--ink); width: 100%; }
+.field input { font: 400 16px var(--font-body); height: 48px; padding: 0 14px; border: 0; border-radius: 12px; background: var(--fill); color: var(--ink); width: 100%; }
 .field input:focus-visible { outline: 3px solid var(--coral); outline-offset: 1px; }
 .field small { color: var(--ink-muted); font-size: 13px; }
-.field.err input { border-color: var(--danger); }
+.field.err input { box-shadow: inset 0 0 0 1.5px var(--danger); }
 .field.err small { color: var(--danger); }
 .toast { display: flex; gap: 12px; align-items: center; background: var(--ink); color: var(--paper); border-radius: 14px; padding: 14px 18px; font-size: 15px; }
 .toast i { width: 10px; height: 10px; border-radius: 50%; background: var(--coral); flex: none; }
-.phone { max-width: 300px; aspect-ratio: 9 / 18.5; border: 2px solid var(--ink); border-radius: 38px; background: var(--ink); padding: 10px; }
+.phone { max-width: 300px; aspect-ratio: 9 / 18.5; border: 1px solid var(--hair); border-radius: 38px; background: var(--ink); padding: 10px; }
 .phone .scr { height: 100%; border-radius: 30px; background: var(--paper); padding: 22px 18px; display: flex; flex-direction: column; gap: 14px; overflow: hidden; }
 .phone .scr .top { display: flex; justify-content: space-between; align-items: center; }
 .phone .scr .top svg { width: 70px; height: auto; }
@@ -245,8 +248,8 @@ td.yes::before { content: "Sim "; }
 .phone .scr .btn { width: 100%; }
 
 /* estúdio */
-.elev { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; min-width: 0; }
-.elev .draw { padding: 18px; overflow-x: auto; border-bottom: 2px solid var(--ink); }
+.elev { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; min-width: 0; }
+.elev .draw { padding: 18px; overflow-x: auto; border-bottom: 1px solid var(--hair); }
 .elev .draw svg { display: block; width: 100%; min-width: 380px; height: auto; }
 .elev .draw text { font: 500 10px var(--font-mono); fill: #6b5f5b; }
 .elev .body { padding: 20px; display: grid; gap: 12px; }
@@ -260,13 +263,13 @@ td.yes::before { content: "Sim "; }
 .s4 { grid-column: span 4; } .s3 { grid-column: span 3; } .s5 { grid-column: span 5; } .s6 { grid-column: span 6; } .s8 { grid-column: span 8; }
 @media (max-width: 1000px) { .s3, .s4, .s5 { grid-column: span 6; } .s8 { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .s3, .s4, .s5, .s6 { grid-column: 1 / -1; } }
-.post { aspect-ratio: 1; background: var(--coral); border: 2px solid var(--ink); border-radius: 16px; padding: 7%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
+.post { aspect-ratio: 1; background: var(--coral); border: 1px solid var(--hair); border-radius: 16px; padding: 7%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
 .post h4 { font: 800 14cqi/.95 var(--font-display); letter-spacing: -.03em; }
 .post .row { display: flex; justify-content: space-between; align-items: flex-end; gap: 8px; }
 .post svg { width: 36cqi; height: auto; }
 .post.ink { background: var(--ink); color: var(--paper); }
 .post.ink h4 em { font-style: normal; color: var(--coral); }
-.sign { aspect-ratio: 4 / 5; background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; padding: 8%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
+.sign { aspect-ratio: 4 / 5; background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 16px; padding: 8%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
 .sign h4 { font: 800 13cqi/.95 var(--font-display); letter-spacing: -.03em; }
 .sign h4 em { font-style: normal; color: var(--coral); }
 .sign ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 2.6cqi; font: 500 3.8cqi/1.3 var(--font-body); counter-reset: s; }
@@ -274,7 +277,7 @@ td.yes::before { content: "Sim "; }
 .sign li::before { content: counter(s); font: 500 3.2cqi var(--font-mono); background: var(--ink); color: var(--paper); border-radius: 999px; padding: 1cqi 2.4cqi; }
 .sign .foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .sign .foot svg { width: 44cqi; height: auto; }
-.mail { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; font-size: 14px; }
+.mail { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 16px; padding: 22px; font-size: 14px; }
 .mail .sig { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 4px; }
 .mail .sig svg { width: 92px; height: auto; margin-top: 8px; }
 .slide { aspect-ratio: 16 / 9; background: var(--ink); color: var(--paper); border-radius: 16px; padding: 6%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
@@ -286,7 +289,7 @@ td.yes::before { content: "Sim "; }
 .shirt { aspect-ratio: 1; background: var(--paper-sunken); border-radius: 16px; display: grid; place-items: center; }
 .shirt svg { width: 78%; height: auto; }
 .bcard { display: grid; gap: 12px; }
-.bcard > div { aspect-ratio: 85 / 55; border-radius: 12px; border: 2px solid var(--ink); padding: 8%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
+.bcard > div { aspect-ratio: 85 / 55; border-radius: 12px; border: 1px solid var(--hair); padding: 8%; display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; }
 .bcard .f { background: var(--ink); justify-content: center; align-items: center; }
 .bcard .f svg { width: 64%; height: auto; }
 .bcard .b { background: var(--paper-raised); }
@@ -296,12 +299,12 @@ td.yes::before { content: "Sim "; }
 
 /* parceiros */
 .lockups { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
-.lk { border: 2px solid var(--ink); border-radius: 16px; background: var(--paper-raised); overflow: hidden; min-width: 0; }
+.lk { border: 1px solid var(--hair); border-radius: 16px; background: var(--paper-raised); overflow: hidden; min-width: 0; }
 .lk .art { padding: 30px 22px; display: flex; align-items: center; justify-content: center; gap: 18px; min-height: 150px; flex-wrap: wrap; }
 .lk .art svg { height: 40px; width: auto; }
-.lk .art .sep { width: 2px; align-self: stretch; background: var(--ink); min-height: 40px; }
+.lk .art .sep { width: 1px; align-self: stretch; background: var(--ink-soft); min-height: 40px; }
 .lk .art .partner { font: 800 22px/1 var(--font-display); letter-spacing: -.01em; padding: 10px 14px; border: 2px dashed var(--ink-soft); border-radius: 10px; color: var(--ink-muted); }
-.lk .cap { border-top: 2px solid var(--ink); padding: 12px 16px; font-size: 14px; }
+.lk .cap { border-top: 1px solid var(--hair); padding: 12px 16px; font-size: 14px; }
 .lk .cap b { display: block; font-weight: 600; }
 .lk .cap span { color: var(--ink-muted); font-size: 13px; }
 .badge-rec { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: var(--paper); border-radius: 999px; padding: 8px 14px 8px 10px; font: 600 14px/1 var(--font-body); }
@@ -309,19 +312,19 @@ td.yes::before { content: "Sim "; }
 
 /* governança */
 .check { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-.check li { display: flex; gap: 12px; align-items: flex-start; background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 12px; padding: 12px 14px; max-width: none; }
-.check li::before { content: ""; flex: none; width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 6px; margin-top: 2px; }
+.check li { display: flex; gap: 12px; align-items: flex-start; background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 12px; padding: 12px 14px; max-width: none; }
+.check li::before { content: ""; flex: none; width: 18px; height: 18px; border: 1.5px solid var(--ink-soft); border-radius: 6px; margin-top: 2px; }
 .files { list-style: none; padding: 0; margin: 0; columns: 2 300px; column-gap: 28px; }
 .files li { break-inside: avoid; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; max-width: none; }
 .files code { font: 500 13px var(--font-mono); }
 .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 10px; counter-reset: f; }
-.flow div { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 14px; padding: 14px; counter-increment: f; min-width: 0; }
+.flow div { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 14px; padding: 14px; counter-increment: f; min-width: 0; }
 .flow div::before { content: "Etapa " counter(f); display: block; font: 500 11px var(--font-mono); color: var(--ink-muted); margin-bottom: 6px; }
 .flow b { font: 700 16px/1.25 var(--font-display); display: block; }
 .flow span { font-size: 13px; color: var(--ink-muted); }
 
 /* persona */
-.persona { background: var(--paper-raised); border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; min-width: 0; display: flex; flex-direction: column; }
+.persona { background: var(--paper-raised); border: 1px solid var(--hair); border-radius: 20px; overflow: hidden; min-width: 0; display: flex; flex-direction: column; }
 .persona .hd { padding: 20px; background: var(--ink); color: var(--paper); display: flex; gap: 14px; align-items: center; }
 .persona .av { width: 52px; height: 52px; border-radius: 50%; background: var(--coral); color: var(--ink); display: grid; place-items: center; font: 800 22px var(--font-display); flex: none; }
 .persona .hd b { font: 800 20px/1.1 var(--font-display); display: block; }
@@ -359,9 +362,15 @@ td.yes::before { content: "Sim "; }
     <a href="#interface"><span class="n">12</span>Interface</a>
     <a href="#estudio"><span class="n">13</span>Estúdio</a>
     <a href="#aplicacoes"><span class="n">14</span>Aplicações</a>
+    <span class="grp">Live commerce</span>
+    <a href="#live"><span class="n">15</span>Levva Live</a>
+    <a href="#sala"><span class="n">16</span>Sala de lives</a>
+    <a href="#playbook"><span class="n">17</span>Playbook do host</a>
+    <a href="#contas"><span class="n">18</span>Contas</a>
+    <a href="#conteudo"><span class="n">19</span>Conteúdo</a>
     <span class="grp">Escala</span>
-    <a href="#parceiros"><span class="n">15</span>Parceiros</a>
-    <a href="#governanca"><span class="n">16</span>Governança</a>
+    <a href="#parceiros"><span class="n">20</span>Parceiros</a>
+    <a href="#governanca"><span class="n">21</span>Governança</a>
   </nav>
 </aside>
 
@@ -372,13 +381,14 @@ td.yes::before { content: "Sim "; }
   <div class="eyebrow"><span class="n">00</span>Brand Guide</div>
   <div class="stage anim" id="hero-logo"><svg viewBox="0 0 402 100" role="img" aria-label="Logo Levva"><g fill="none" stroke="#1a1210" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path class="br-tr" d="M54 12H72A16 16 0 0 1 88 28V46"/><path class="br-bl" d="M12 54V72A16 16 0 0 0 28 88H46"/></g><circle class="dot" cx="50" cy="50" r="12" fill="#ff4433"/><g fill="#1a1210"><path class="ltr l0" d="M122.0 88.0V12.0H139.5885714285714V88.0Z"/><path class="ltr l1" d="M173.3542857142857 89.52Q165.21142857142857 89.52 159.72857142857143 87.18571428571428Q154.24571428571429 84.85142857142857 150.88 80.78Q147.5142857142857 76.70857142857143 146.04857142857142 71.49714285714285Q144.58285714285714 66.28571428571428 144.58285714285714 60.53142857142858Q144.58285714285714 54.34285714285714 146.15714285714284 48.69714285714286Q147.73142857142858 43.05142857142857 151.04285714285714 38.65428571428572Q154.3542857142857 34.25714285714286 159.62 31.705714285714286Q164.88571428571427 29.154285714285713 172.26857142857142 29.154285714285713Q179.65142857142857 29.154285714285713 184.91714285714284 31.705714285714286Q190.18285714285713 34.25714285714286 193.33142857142855 38.817142857142855Q196.48 43.37714285714286 197.40285714285716 49.34857142857143Q198.3257142857143 55.32 197.13142857142856 62.268571428571434L155.54857142857142 62.92V53.36571428571429L183.66857142857143 52.822857142857146L181.38857142857142 58.36Q182.04 53.36571428571429 181.22571428571428 49.94571428571429Q180.41142857142856 46.52571428571429 178.24 44.73428571428572Q176.06857142857143 42.94285714285714 172.26857142857142 42.94285714285714Q168.25142857142856 42.94285714285714 165.86285714285714 45.00571428571429Q163.4742857142857 47.06857142857143 162.49714285714285 50.81428571428572Q161.51999999999998 54.56 161.51999999999998 59.66285714285714Q161.51999999999998 68.45714285714286 164.45142857142855 72.47428571428571Q167.38285714285715 76.49142857142857 173.46285714285713 76.49142857142857Q176.06857142857143 76.49142857142857 177.8057142857143 75.84Q179.54285714285714 75.18857142857144 180.62857142857143 73.94Q181.71428571428572 72.69142857142857 182.14857142857142 70.9Q182.58285714285714 69.10857142857142 182.4742857142857 66.82857142857142L198.54285714285714 67.69714285714286Q198.86857142857144 71.28 197.83714285714285 75.08Q196.8057142857143 78.88 193.98285714285714 82.13714285714286Q191.16 85.39428571428572 186.11142857142858 87.45714285714286Q181.06285714285713 89.52 173.3542857142857 89.52Z"/><path class="ltr l2" d="M216.78285714285715 88.0 199.52 30.674285714285716H218.1942857142857L228.0742857142857 73.45142857142858H228.50857142857143L238.82285714285715 30.674285714285716H256.4114285714286L239.14857142857142 88.0Z"/><path class="ltr l3" d="M273.02285714285716 88.0 255.76000000000002 30.674285714285716H274.4342857142857L284.31428571428575 73.45142857142858H284.74857142857144L295.0628571428571 30.674285714285716H312.6514285714286L295.3885714285714 88.0Z"/><g class="ltr l4"><path d="M342.2914285714286 89.52Q334.03999999999996 89.52 327.6342857142857 86.20857142857142Q321.2285714285714 82.89714285714285 317.64571428571423 76.22Q314.0628571428571 69.54285714285714 314.0628571428571 59.44571428571429Q314.0628571428571 48.91428571428572 317.80857142857144 42.23714285714286Q321.5542857142857 35.56 328.01428571428573 32.35714285714286Q334.4742857142857 29.154285714285713 342.6171428571428 29.154285714285713Q351.0857142857143 29.154285714285713 357.4371428571428 32.465714285714284Q363.7885714285714 35.777142857142856 367.3171428571428 42.45428571428572Q370.8457142857143 49.13142857142857 370.8457142857143 59.33714285714286Q370.8457142857143 69.86857142857143 367.1 76.54571428571428Q363.3542857142857 83.22285714285714 356.89428571428573 86.37142857142857Q350.4342857142857 89.52 342.2914285714286 89.52ZM342.7257142857143 76.6Q346.09142857142854 76.6 348.3714285714285 74.69999999999999Q350.65142857142854 72.8 351.8457142857143 69.10857142857142Q353.03999999999996 65.41714285714286 353.03999999999996 60.31428571428572Q353.03999999999996 54.66857142857143 351.7371428571428 50.81428571428572Q350.4342857142857 46.96 347.9914285714285 44.89714285714285Q345.5485714285714 42.83428571428571 342.0742857142857 42.83428571428571Q338.81714285714287 42.83428571428571 336.53714285714284 44.73428571428572Q334.25714285714287 46.63428571428572 333.0628571428571 50.325714285714284Q331.8685714285714 54.01714285714286 331.8685714285714 59.22857142857143Q331.8685714285714 67.48 334.74571428571426 72.03999999999999Q337.62285714285713 76.6 342.7257142857143 76.6Z"/><path d="M353.26 88.00V39.47A8.79 8.79 0 0 1 370.85 39.47V88.00Z"/></g></g><circle class="pd" cx="387.24" cy="79.21" r="8.79" fill="#ff4433"/></svg></div>
   <h1>Quem compra, conta.</h1>
-  <p class="lead">A Levva instala estúdios compactos dentro de shoppings e transforma compras reais em vídeos prontos para as lojas, e cada gravação em aprendizado sobre quem compra. Este guia reúne tudo o que é preciso para construir a marca em escala: estratégia, identidade, produto, lugar e regras de uso.</p>
+  <p class="lead">A Levva instala estúdios compactos dentro de shoppings e transforma compras reais em vídeos prontos para as lojas, e cada gravação em aprendizado sobre quem compra. Na sala de lives, hosts treinados vendem ao vivo no TikTok Shop para as marcas clientes. Este guia reúne tudo o que é preciso para construir a marca em escala: estratégia, identidade, produto, lugar e regras de uso.</p>
   <div class="uirow" style="margin-top:28px"><button class="btn" type="button" id="replay">Rever animação</button><span class="rec"><i></i>REC 00:30</span></div>
   <div class="facts">
     <div><b>1</b><span>cor forte: coral #FF4433</span></div>
     <div><b>3</b><span>famílias tipográficas</span></div>
     <div><b>12</b><span>versões de logo</span></div>
     <div><b>4</b><span>formatos de estúdio</span></div>
+    <div><b>8</b><span>baias na sala de lives</span></div>
     <div><b>30 s</b><span>duração padrão do vídeo</span></div>
   </div>
 
@@ -390,6 +400,8 @@ td.yes::before { content: "Sim "; }
       <a href="#cores"><b>Cores e tokens</b><span>Hex, uso, contraste, tema claro e escuro</span></a>
       <a href="#video"><b>Kit de vídeo</b><span>Legenda, nome na tela, cartão final, áreas seguras</span></a>
       <a href="#estudio"><b>Estúdios</b><span>4 formatos com medidas, materiais e luz</span></a>
+      <a href="#playbook"><b>Playbook de live</b><span>Método VEJA, roteiro de 60 min, certificação do host</span></a>
+      <a href="#contas"><b>Contas do TikTok Shop</b><span>Quem é dono de cada conta, segurança, aquecimento</span></a>
       <a href="#parceiros"><b>Co-branding</b><span>Levva com shoppings e lojas</span></a>
       <a href="#governanca"><b>Checklist e arquivos</b><span>Antes de publicar, nomes de arquivo, onde está tudo</span></a>
     </div>
@@ -404,8 +416,9 @@ td.yes::before { content: "Sim "; }
           <li>Nome Levva, no lugar de MONI e LiveHub, com assinatura "Quem compra, conta."</li>
           <li>Logo: visor com ponto de gravação e a palavra "levva." com ponto final coral.</li>
           <li>Base visual herdada da MONI: papel, tinta, coral, Bricolage Grotesque e Inter.</li>
-          <li>Marca única com descritores: Levva Estúdio, Levva Painel, Levva Público.</li>
-          <li>Botões no estilo Apple: chapados, sem borda e sem sombra.</li>
+          <li>Marca única com descritores: Levva Estúdio, Live, Conteúdo, Painel e Público.</li>
+          <li>Estilo Apple: botões chapados, caixas sem contorno, fio cinza claro quando necessário.</li>
+          <li>Nova frente Levva Live: sala de lives com hosts por setor no TikTok Shop.</li>
           <li>Vídeo começa pelo cliente; a logo só entra no cartão final.</li>
         </ul></div>
       <div class="card"><span class="pill no">A validar no piloto</span>
@@ -413,6 +426,8 @@ td.yes::before { content: "Sim "; }
           <li>Incentivo ao consumidor: valor, formato e quem paga.</li>
           <li>Modelo de cobrança: por vídeo, pacote mensal ou conteúdo com relatório.</li>
           <li>Formato de estúdio do piloto: o Pop-up é o recomendado.</li>
+          <li>Custo e vendas por hora de live, para precificar o Levva Live.</li>
+          <li>Credenciamento como parceiro oficial do TikTok Shop no Brasil.</li>
           <li>Registro do nome e do domínio levva.com.br no INPI e no Registro.br.</li>
           <li>Prova física das cores com a gráfica e a marcenaria.</li>
         </ul></div>
@@ -455,17 +470,8 @@ td.yes::before { content: "Sim "; }
     <div class="grid" style="gap:14px"><div style="display:grid;grid-template-columns:110px 1fr 110px;gap:14px;align-items:center"><span style="font-size:14px;text-align:right">Formal</span><div style="position:relative;height:8px;border-radius:999px;background:var(--paper-sunken)"><span style="position:absolute;top:50%;left:64%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)"></span></div><span style="font-size:14px">Descontraída</span></div><div style="display:grid;grid-template-columns:110px 1fr 110px;gap:14px;align-items:center"><span style="font-size:14px;text-align:right">Séria</span><div style="position:relative;height:8px;border-radius:999px;background:var(--paper-sunken)"><span style="position:absolute;top:50%;left:46%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)"></span></div><span style="font-size:14px">Divertida</span></div><div style="display:grid;grid-template-columns:110px 1fr 110px;gap:14px;align-items:center"><span style="font-size:14px;text-align:right">Discreta</span><div style="position:relative;height:8px;border-radius:999px;background:var(--paper-sunken)"><span style="position:absolute;top:50%;left:70%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)"></span></div><span style="font-size:14px">Ousada</span></div><div style="display:grid;grid-template-columns:110px 1fr 110px;gap:14px;align-items:center"><span style="font-size:14px;text-align:right">Técnica</span><div style="position:relative;height:8px;border-radius:999px;background:var(--paper-sunken)"><span style="position:absolute;top:50%;left:80%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)"></span></div><span style="font-size:14px">Humana</span></div><div style="display:grid;grid-template-columns:110px 1fr 110px;gap:14px;align-items:center"><span style="font-size:14px;text-align:right">Exclusiva</span><div style="position:relative;height:8px;border-radius:999px;background:var(--paper-sunken)"><span style="position:absolute;top:50%;left:74%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)"></span></div><span style="font-size:14px">Popular</span></div></div>
   </div>
 
-  <div class="sec"><h3>Arquitetura de marca</h3><p class="muted">Marca única (branded house). Nenhuma sub-marca com logo próprio: os produtos usam a assinatura Levva com um descritor em português.</p>
-    <div class="diagram"><svg viewBox="0 0 900 250" role="img" aria-label="Arquitetura: Levva no topo, com Estúdio, Painel e Público abaixo">
-      <rect x="330" y="16" width="240" height="64" rx="16" fill="#1a1210"/>
-      <g transform="translate(372 30) scale(.36)"><g fill="none" stroke="#fffaf5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M54 12H72A16 16 0 0 1 88 28V46"/><path d="M12 54V72A16 16 0 0 0 28 88H46"/></g><circle cx="50" cy="50" r="12" fill="#ff4433"/><g fill="#fffaf5"><path d="M122.0 88.0V12.0H139.5885714285714V88.0Z"/><path d="M173.3542857142857 89.52Q165.21142857142857 89.52 159.72857142857143 87.18571428571428Q154.24571428571429 84.85142857142857 150.88 80.78Q147.5142857142857 76.70857142857143 146.04857142857142 71.49714285714285Q144.58285714285714 66.28571428571428 144.58285714285714 60.53142857142858Q144.58285714285714 54.34285714285714 146.15714285714284 48.69714285714286Q147.73142857142858 43.05142857142857 151.04285714285714 38.65428571428572Q154.3542857142857 34.25714285714286 159.62 31.705714285714286Q164.88571428571427 29.154285714285713 172.26857142857142 29.154285714285713Q179.65142857142857 29.154285714285713 184.91714285714284 31.705714285714286Q190.18285714285713 34.25714285714286 193.33142857142855 38.817142857142855Q196.48 43.37714285714286 197.40285714285716 49.34857142857143Q198.3257142857143 55.32 197.13142857142856 62.268571428571434L155.54857142857142 62.92V53.36571428571429L183.66857142857143 52.822857142857146L181.38857142857142 58.36Q182.04 53.36571428571429 181.22571428571428 49.94571428571429Q180.41142857142856 46.52571428571429 178.24 44.73428571428572Q176.06857142857143 42.94285714285714 172.26857142857142 42.94285714285714Q168.25142857142856 42.94285714285714 165.86285714285714 45.00571428571429Q163.4742857142857 47.06857142857143 162.49714285714285 50.81428571428572Q161.51999999999998 54.56 161.51999999999998 59.66285714285714Q161.51999999999998 68.45714285714286 164.45142857142855 72.47428571428571Q167.38285714285715 76.49142857142857 173.46285714285713 76.49142857142857Q176.06857142857143 76.49142857142857 177.8057142857143 75.84Q179.54285714285714 75.18857142857144 180.62857142857143 73.94Q181.71428571428572 72.69142857142857 182.14857142857142 70.9Q182.58285714285714 69.10857142857142 182.4742857142857 66.82857142857142L198.54285714285714 67.69714285714286Q198.86857142857144 71.28 197.83714285714285 75.08Q196.8057142857143 78.88 193.98285714285714 82.13714285714286Q191.16 85.39428571428572 186.11142857142858 87.45714285714286Q181.06285714285713 89.52 173.3542857142857 89.52Z"/><path d="M216.78285714285715 88.0 199.52 30.674285714285716H218.1942857142857L228.0742857142857 73.45142857142858H228.50857142857143L238.82285714285715 30.674285714285716H256.4114285714286L239.14857142857142 88.0Z"/><path d="M273.02285714285716 88.0 255.76000000000002 30.674285714285716H274.4342857142857L284.31428571428575 73.45142857142858H284.74857142857144L295.0628571428571 30.674285714285716H312.6514285714286L295.3885714285714 88.0Z"/><g><path d="M342.2914285714286 89.52Q334.03999999999996 89.52 327.6342857142857 86.20857142857142Q321.2285714285714 82.89714285714285 317.64571428571423 76.22Q314.0628571428571 69.54285714285714 314.0628571428571 59.44571428571429Q314.0628571428571 48.91428571428572 317.80857142857144 42.23714285714286Q321.5542857142857 35.56 328.01428571428573 32.35714285714286Q334.4742857142857 29.154285714285713 342.6171428571428 29.154285714285713Q351.0857142857143 29.154285714285713 357.4371428571428 32.465714285714284Q363.7885714285714 35.777142857142856 367.3171428571428 42.45428571428572Q370.8457142857143 49.13142857142857 370.8457142857143 59.33714285714286Q370.8457142857143 69.86857142857143 367.1 76.54571428571428Q363.3542857142857 83.22285714285714 356.89428571428573 86.37142857142857Q350.4342857142857 89.52 342.2914285714286 89.52ZM342.7257142857143 76.6Q346.09142857142854 76.6 348.3714285714285 74.69999999999999Q350.65142857142854 72.8 351.8457142857143 69.10857142857142Q353.03999999999996 65.41714285714286 353.03999999999996 60.31428571428572Q353.03999999999996 54.66857142857143 351.7371428571428 50.81428571428572Q350.4342857142857 46.96 347.9914285714285 44.89714285714285Q345.5485714285714 42.83428571428571 342.0742857142857 42.83428571428571Q338.81714285714287 42.83428571428571 336.53714285714284 44.73428571428572Q334.25714285714287 46.63428571428572 333.0628571428571 50.325714285714284Q331.8685714285714 54.01714285714286 331.8685714285714 59.22857142857143Q331.8685714285714 67.48 334.74571428571426 72.03999999999999Q337.62285714285713 76.6 342.7257142857143 76.6Z"/><path d="M353.26 88.00V39.47A8.79 8.79 0 0 1 370.85 39.47V88.00Z"/></g></g><circle cx="387.24" cy="79.21" r="8.79" fill="#ff4433"/></g>
-      <path d="M450 80V112M150 112H750M150 112V138M450 112V138M750 112V138" stroke="#1a1210" stroke-width="2" fill="none"/>
-      <rect x="40" y="138" width="220" height="92" rx="16" fill="#fffaf5" stroke="#1a1210" stroke-width="2"/>
-      <rect x="340" y="138" width="220" height="92" rx="16" fill="#fffaf5" stroke="#1a1210" stroke-width="2"/>
-      <rect x="640" y="138" width="220" height="92" rx="16" fill="#fffaf5" stroke="#1a1210" stroke-width="2"/>
-      <g font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#1a1210"><text x="60" y="176">Levva Estúdio</text><text x="360" y="176">Levva Painel</text><text x="660" y="176">Levva Público</text></g>
-      <g font-family="Inter, sans-serif" font-size="13" fill="#6b5f5b"><text x="60" y="202">o lugar: estandes nos shoppings</text><text x="360" y="202">o produto do lojista: vídeos</text><text x="660" y="202">o estudo: relatório do público</text><text x="360" y="220">e aprovações</text></g>
-    </svg></div>
+  <div class="sec"><h3>Arquitetura de marca</h3><p class="muted">Marca única (branded house). Nenhuma sub-marca com logo próprio: as frentes usam a assinatura Levva com um descritor em português.</p>
+    <div class="diagram"><svg viewBox="0 0 920 240" role="img" aria-label="Arquitetura: Levva no topo, com Estúdio, Live, Conteúdo, Painel e Público abaixo"><rect x="340" y="16" width="240" height="64" rx="16" fill="#1a1210"/><g transform="translate(382 30) scale(.36)"><g fill="none" stroke="#fffaf5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M54 12H72A16 16 0 0 1 88 28V46"/><path d="M12 54V72A16 16 0 0 0 28 88H46"/></g><circle cx="50" cy="50" r="12" fill="#ff4433"/><g fill="#fffaf5"><path d="M122.0 88.0V12.0H139.5885714285714V88.0Z"/><path d="M173.3542857142857 89.52Q165.21142857142857 89.52 159.72857142857143 87.18571428571428Q154.24571428571429 84.85142857142857 150.88 80.78Q147.5142857142857 76.70857142857143 146.04857142857142 71.49714285714285Q144.58285714285714 66.28571428571428 144.58285714285714 60.53142857142858Q144.58285714285714 54.34285714285714 146.15714285714284 48.69714285714286Q147.73142857142858 43.05142857142857 151.04285714285714 38.65428571428572Q154.3542857142857 34.25714285714286 159.62 31.705714285714286Q164.88571428571427 29.154285714285713 172.26857142857142 29.154285714285713Q179.65142857142857 29.154285714285713 184.91714285714284 31.705714285714286Q190.18285714285713 34.25714285714286 193.33142857142855 38.817142857142855Q196.48 43.37714285714286 197.40285714285716 49.34857142857143Q198.3257142857143 55.32 197.13142857142856 62.268571428571434L155.54857142857142 62.92V53.36571428571429L183.66857142857143 52.822857142857146L181.38857142857142 58.36Q182.04 53.36571428571429 181.22571428571428 49.94571428571429Q180.41142857142856 46.52571428571429 178.24 44.73428571428572Q176.06857142857143 42.94285714285714 172.26857142857142 42.94285714285714Q168.25142857142856 42.94285714285714 165.86285714285714 45.00571428571429Q163.4742857142857 47.06857142857143 162.49714285714285 50.81428571428572Q161.51999999999998 54.56 161.51999999999998 59.66285714285714Q161.51999999999998 68.45714285714286 164.45142857142855 72.47428571428571Q167.38285714285715 76.49142857142857 173.46285714285713 76.49142857142857Q176.06857142857143 76.49142857142857 177.8057142857143 75.84Q179.54285714285714 75.18857142857144 180.62857142857143 73.94Q181.71428571428572 72.69142857142857 182.14857142857142 70.9Q182.58285714285714 69.10857142857142 182.4742857142857 66.82857142857142L198.54285714285714 67.69714285714286Q198.86857142857144 71.28 197.83714285714285 75.08Q196.8057142857143 78.88 193.98285714285714 82.13714285714286Q191.16 85.39428571428572 186.11142857142858 87.45714285714286Q181.06285714285713 89.52 173.3542857142857 89.52Z"/><path d="M216.78285714285715 88.0 199.52 30.674285714285716H218.1942857142857L228.0742857142857 73.45142857142858H228.50857142857143L238.82285714285715 30.674285714285716H256.4114285714286L239.14857142857142 88.0Z"/><path d="M273.02285714285716 88.0 255.76000000000002 30.674285714285716H274.4342857142857L284.31428571428575 73.45142857142858H284.74857142857144L295.0628571428571 30.674285714285716H312.6514285714286L295.3885714285714 88.0Z"/><g><path d="M342.2914285714286 89.52Q334.03999999999996 89.52 327.6342857142857 86.20857142857142Q321.2285714285714 82.89714285714285 317.64571428571423 76.22Q314.0628571428571 69.54285714285714 314.0628571428571 59.44571428571429Q314.0628571428571 48.91428571428572 317.80857142857144 42.23714285714286Q321.5542857142857 35.56 328.01428571428573 32.35714285714286Q334.4742857142857 29.154285714285713 342.6171428571428 29.154285714285713Q351.0857142857143 29.154285714285713 357.4371428571428 32.465714285714284Q363.7885714285714 35.777142857142856 367.3171428571428 42.45428571428572Q370.8457142857143 49.13142857142857 370.8457142857143 59.33714285714286Q370.8457142857143 69.86857142857143 367.1 76.54571428571428Q363.3542857142857 83.22285714285714 356.89428571428573 86.37142857142857Q350.4342857142857 89.52 342.2914285714286 89.52ZM342.7257142857143 76.6Q346.09142857142854 76.6 348.3714285714285 74.69999999999999Q350.65142857142854 72.8 351.8457142857143 69.10857142857142Q353.03999999999996 65.41714285714286 353.03999999999996 60.31428571428572Q353.03999999999996 54.66857142857143 351.7371428571428 50.81428571428572Q350.4342857142857 46.96 347.9914285714285 44.89714285714285Q345.5485714285714 42.83428571428571 342.0742857142857 42.83428571428571Q338.81714285714287 42.83428571428571 336.53714285714284 44.73428571428572Q334.25714285714287 46.63428571428572 333.0628571428571 50.325714285714284Q331.8685714285714 54.01714285714286 331.8685714285714 59.22857142857143Q331.8685714285714 67.48 334.74571428571426 72.03999999999999Q337.62285714285713 76.6 342.7257142857143 76.6Z"/><path d="M353.26 88.00V39.47A8.79 8.79 0 0 1 370.85 39.47V88.00Z"/></g></g><circle cx="387.24" cy="79.21" r="8.79" fill="#ff4433"/></g><path d="M460 80V110M100 110H820M100 110V138M280 110V138M460 110V138M640 110V138M820 110V138" stroke="rgba(26,18,16,.25)" stroke-width="1.5" fill="none"/><rect x="20" y="138" width="160" height="86" rx="16" fill="#f3e8db"/><text x="36" y="172" style="font:800 17px Bricolage Grotesque,sans-serif;fill:#1a1210">Levva Estúdio</text><text x="36" y="198" style="font:500 12px Inter,sans-serif;fill:#6b5f5b">gravação no shopping</text><rect x="200" y="138" width="160" height="86" rx="16" fill="#ffe4df"/><text x="216" y="172" style="font:800 17px Bricolage Grotesque,sans-serif;fill:#1a1210">Levva Live</text><text x="216" y="198" style="font:500 12px Inter,sans-serif;fill:#6b5f5b">lives no TikTok Shop</text><rect x="380" y="138" width="160" height="86" rx="16" fill="#ffe4df"/><text x="396" y="172" style="font:800 17px Bricolage Grotesque,sans-serif;fill:#1a1210">Levva Conteúdo</text><text x="396" y="198" style="font:500 12px Inter,sans-serif;fill:#6b5f5b">vídeos com IA e design</text><rect x="560" y="138" width="160" height="86" rx="16" fill="#f3e8db"/><text x="576" y="172" style="font:800 17px Bricolage Grotesque,sans-serif;fill:#1a1210">Levva Painel</text><text x="576" y="198" style="font:500 12px Inter,sans-serif;fill:#6b5f5b">vídeos e aprovações</text><rect x="740" y="138" width="160" height="86" rx="16" fill="#f3e8db"/><text x="756" y="172" style="font:800 17px Bricolage Grotesque,sans-serif;fill:#1a1210">Levva Público</text><text x="756" y="198" style="font:500 12px Inter,sans-serif;fill:#6b5f5b">relatório do público</text></svg></div>
     <div class="dd" style="margin-top:16px">
       <div class="do"><h4>Regra de nomes</h4><ul><li>"Levva" + um substantivo em português que diga o que é.</li><li>O consumidor só vê "Levva" e o estúdio. Os descritores são para lojistas e shoppings.</li><li>Campanhas usam o nome da campanha, nunca uma nova marca.</li></ul></div>
       <div class="dont"><h4>Não faça</h4><ul><li>Criar logos para produtos ou campanhas.</li><li>Usar inglês quando houver palavra em português.</li><li>Juntar palavras: "LevvaPlay", "Levvinha".</li></ul></div>
@@ -732,7 +738,7 @@ td.yes::before { content: "Sim "; }
 
 <!-- 09 ELEMENTOS -->
 <section class="chap" id="elementos" data-title="Elementos" hidden>
-  <header><div class="eyebrow"><span class="n">09</span>Elementos gráficos</div><h2>Pôster impresso, com visor.</h2>
+  <header><div class="eyebrow"><span class="n">09</span>Elementos gráficos</div><h2>Limpo, com visor.</h2>
   <p class="lead">Poucos elementos, sempre os mesmos. É a repetição que faz a marca ser reconhecida de longe no corredor do shopping.</p></header>
   <div class="grid g3">
     <div class="card"><h3>Moldura de visor</h3><div class="frame" style="color:var(--ink)"><p style="margin:0;font:800 26px/1.05 var(--font-display)">Enquadre o que importa.</p></div><p class="muted">Cantos inferior esquerdo e superior direito, sempre nessa diagonal. Em fotos, títulos e telas.</p></div>
@@ -741,16 +747,16 @@ td.yes::before { content: "Sim "; }
   </div>
   <div class="sec"><h3>Padrão de visores</h3>
     <div class="grid g2">
-      <div style="height:220px;border:2px solid var(--ink);border-radius:16px;background-color:var(--coral);background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22 viewBox=%220 0 100 100%22%3E%3Cg fill=%22none%22 stroke=%22%231a1210%22 stroke-width=%227%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M54 12H72A16 16 0 0 1 88 28V46M12 54V72A16 16 0 0 0 28 88H46%22/%3E%3C/g%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%229%22 fill=%22%23fffaf5%22/%3E%3C/svg%3E')" role="img" aria-label="Padrão de visores em tinta sobre coral"></div>
-      <div style="height:220px;border:2px solid var(--ink);border-radius:16px;background-color:var(--ink);background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22 viewBox=%220 0 100 100%22%3E%3Cg fill=%22none%22 stroke=%22%23fbf3ea%22 stroke-width=%225%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M54 12H72A16 16 0 0 1 88 28V46M12 54V72A16 16 0 0 0 28 88H46%22/%3E%3C/g%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23ff4433%22/%3E%3C/svg%3E')" role="img" aria-label="Padrão de visores em papel sobre tinta"></div>
+      <div style="height:220px;border:1px solid var(--hair);border-radius:16px;background-color:var(--coral);background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22 viewBox=%220 0 100 100%22%3E%3Cg fill=%22none%22 stroke=%22%231a1210%22 stroke-width=%227%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M54 12H72A16 16 0 0 1 88 28V46M12 54V72A16 16 0 0 0 28 88H46%22/%3E%3C/g%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%229%22 fill=%22%23fffaf5%22/%3E%3C/svg%3E')" role="img" aria-label="Padrão de visores em tinta sobre coral"></div>
+      <div style="height:220px;border:1px solid var(--hair);border-radius:16px;background-color:var(--ink);background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22 viewBox=%220 0 100 100%22%3E%3Cg fill=%22none%22 stroke=%22%23fbf3ea%22 stroke-width=%225%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M54 12H72A16 16 0 0 1 88 28V46M12 54V72A16 16 0 0 0 28 88H46%22/%3E%3C/g%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23ff4433%22/%3E%3C/svg%3E')" role="img" aria-label="Padrão de visores em papel sobre tinta"></div>
     </div>
     <p class="muted">Para capas, paredes do estúdio, ecobags e fundos de cartões. Nunca atrás de texto pequeno.</p>
   </div>
   <div class="sec"><h3>Forma, borda e profundidade</h3>
     <div class="grid g4">
-      <div class="soft"><h4>Borda</h4><p>2 px em tinta em cartões, campos e modais. Botões não têm borda.</p></div>
+      <div class="soft"><h4>Borda</h4><p>Sem contorno. Quando for preciso separar, um fio de 1 px em tinta a 9% (<span class="mono">--hair</span>). Campos usam preenchimento de tinta a 5%.</p></div>
       <div class="soft"><h4>Cantos</h4><p><span class="mono">8</span> campos · <span class="mono">12</span> botões quadrados · <span class="mono">16</span> cartões · <span class="mono">24</span> ícone e banners · pílula em ações.</p></div>
-      <div class="soft"><h4>Sombra</h4><p>Chapada, deslocada 4 px, sem desfoque, só no elemento que precisa se destacar.</p></div>
+      <div class="soft"><h4>Sombra</h4><p>Suave e rara: só em elementos que flutuam, como modais e o cartão em destaque (<span class="mono">--lift</span>).</p></div>
       <div class="soft"><h4>Grade</h4><p>Base de 4 px. Layout em 12 colunas, margem de 16 px no celular e 24 a 64 px no desktop.</p></div>
     </div>
   </div>
@@ -879,12 +885,301 @@ td.yes::before { content: "Sim "; }
     <div class="app s3"><div class="shirt"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M60 30 L85 20 Q100 34 115 20 L140 30 L172 58 L152 82 L140 72 L140 180 L60 180 L60 72 L48 82 L28 58 Z" fill="#1a1210"/><circle cx="122" cy="62" r="6" fill="#ff4433"/></svg></div><p class="cap"><b>Camiseta da equipe</b> <span>Tinta, ponto coral no peito.</span></p></div>
     <div class="app s3"><div class="shirt" style="background:var(--coral)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M50 60 H150 L142 182 H58 Z" fill="#fbf3ea"/><path d="M76 60 Q76 26 100 26 Q124 26 124 60" fill="none" stroke="#fbf3ea" stroke-width="6"/><g transform="translate(68 104) scale(.32)"><g fill="none" stroke="#1a1210" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M54 12H72A16 16 0 0 1 88 28V46"/><path d="M12 54V72A16 16 0 0 0 28 88H46"/></g><circle cx="50" cy="50" r="12" fill="#ff4433"/></g><g transform="translate(64 146) scale(.18)"><g fill="#1a1210"><path d="M122.0 88.0V12.0H139.5885714285714V88.0Z"/><path d="M173.3542857142857 89.52Q165.21142857142857 89.52 159.72857142857143 87.18571428571428Q154.24571428571429 84.85142857142857 150.88 80.78Q147.5142857142857 76.70857142857143 146.04857142857142 71.49714285714285Q144.58285714285714 66.28571428571428 144.58285714285714 60.53142857142858Q144.58285714285714 54.34285714285714 146.15714285714284 48.69714285714286Q147.73142857142858 43.05142857142857 151.04285714285714 38.65428571428572Q154.3542857142857 34.25714285714286 159.62 31.705714285714286Q164.88571428571427 29.154285714285713 172.26857142857142 29.154285714285713Q179.65142857142857 29.154285714285713 184.91714285714284 31.705714285714286Q190.18285714285713 34.25714285714286 193.33142857142855 38.817142857142855Q196.48 43.37714285714286 197.40285714285716 49.34857142857143Q198.3257142857143 55.32 197.13142857142856 62.268571428571434L155.54857142857142 62.92V53.36571428571429L183.66857142857143 52.822857142857146L181.38857142857142 58.36Q182.04 53.36571428571429 181.22571428571428 49.94571428571429Q180.41142857142856 46.52571428571429 178.24 44.73428571428572Q176.06857142857143 42.94285714285714 172.26857142857142 42.94285714285714Q168.25142857142856 42.94285714285714 165.86285714285714 45.00571428571429Q163.4742857142857 47.06857142857143 162.49714285714285 50.81428571428572Q161.51999999999998 54.56 161.51999999999998 59.66285714285714Q161.51999999999998 68.45714285714286 164.45142857142855 72.47428571428571Q167.38285714285715 76.49142857142857 173.46285714285713 76.49142857142857Q176.06857142857143 76.49142857142857 177.8057142857143 75.84Q179.54285714285714 75.18857142857144 180.62857142857143 73.94Q181.71428571428572 72.69142857142857 182.14857142857142 70.9Q182.58285714285714 69.10857142857142 182.4742857142857 66.82857142857142L198.54285714285714 67.69714285714286Q198.86857142857144 71.28 197.83714285714285 75.08Q196.8057142857143 78.88 193.98285714285714 82.13714285714286Q191.16 85.39428571428572 186.11142857142858 87.45714285714286Q181.06285714285713 89.52 173.3542857142857 89.52Z"/><path d="M216.78285714285715 88.0 199.52 30.674285714285716H218.1942857142857L228.0742857142857 73.45142857142858H228.50857142857143L238.82285714285715 30.674285714285716H256.4114285714286L239.14857142857142 88.0Z"/><path d="M273.02285714285716 88.0 255.76000000000002 30.674285714285716H274.4342857142857L284.31428571428575 73.45142857142858H284.74857142857144L295.0628571428571 30.674285714285716H312.6514285714286L295.3885714285714 88.0Z"/><g><path d="M342.2914285714286 89.52Q334.03999999999996 89.52 327.6342857142857 86.20857142857142Q321.2285714285714 82.89714285714285 317.64571428571423 76.22Q314.0628571428571 69.54285714285714 314.0628571428571 59.44571428571429Q314.0628571428571 48.91428571428572 317.80857142857144 42.23714285714286Q321.5542857142857 35.56 328.01428571428573 32.35714285714286Q334.4742857142857 29.154285714285713 342.6171428571428 29.154285714285713Q351.0857142857143 29.154285714285713 357.4371428571428 32.465714285714284Q363.7885714285714 35.777142857142856 367.3171428571428 42.45428571428572Q370.8457142857143 49.13142857142857 370.8457142857143 59.33714285714286Q370.8457142857143 69.86857142857143 367.1 76.54571428571428Q363.3542857142857 83.22285714285714 356.89428571428573 86.37142857142857Q350.4342857142857 89.52 342.2914285714286 89.52ZM342.7257142857143 76.6Q346.09142857142854 76.6 348.3714285714285 74.69999999999999Q350.65142857142854 72.8 351.8457142857143 69.10857142857142Q353.03999999999996 65.41714285714286 353.03999999999996 60.31428571428572Q353.03999999999996 54.66857142857143 351.7371428571428 50.81428571428572Q350.4342857142857 46.96 347.9914285714285 44.89714285714285Q345.5485714285714 42.83428571428571 342.0742857142857 42.83428571428571Q338.81714285714287 42.83428571428571 336.53714285714284 44.73428571428572Q334.25714285714287 46.63428571428572 333.0628571428571 50.325714285714284Q331.8685714285714 54.01714285714286 331.8685714285714 59.22857142857143Q331.8685714285714 67.48 334.74571428571426 72.03999999999999Q337.62285714285713 76.6 342.7257142857143 76.6Z"/><path d="M353.26 88.00V39.47A8.79 8.79 0 0 1 370.85 39.47V88.00Z"/></g></g><circle cx="387.24" cy="79.21" r="8.79" fill="#ff4433"/></g></svg></div><p class="cap"><b>Ecobag de brinde</b> <span>Para quem grava.</span></p></div>
   </div>
-  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#estudio"><span>Anterior</span><b>Estúdio</b></a><a class="next" href="#parceiros"><span>Próximo</span><b>Parceiros</b></a></nav>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#estudio"><span>Anterior</span><b>Estúdio</b></a><a class="next" href="#live"><span>Próximo</span><b>Levva Live</b></a></nav>
 </section>
 
-<!-- 15 PARCEIROS -->
+<!-- 15 LEVVA LIVE -->
+<section class="chap" id="live" data-title="Levva Live" hidden>
+  <header><div class="eyebrow"><span class="n">15</span>Levva Live</div><h2>Do estúdio para a live que vende.</h2>
+  <p class="lead">O Levva Estúdio grava quem já comprou. O Levva Live vende ao vivo para quem ainda vai comprar. Uma sala com hosts treinados faz lives no TikTok Shop para as marcas clientes, cada host com a sua carteira de produtos, e o Levva Conteúdo produz os vídeos curtos que levam público para essas lives.</p></header>
+  <div class="grid g3">
+    <div class="card"><span class="pill coral">Levva Live</span><h3>Lives de venda</h3><p class="muted">Hosts por setor vendem os produtos das marcas clientes no TikTok Shop, em turnos, a partir da sala de lives.</p></div>
+    <div class="card"><span class="pill coral">Levva Conteúdo</span><h3>Vídeos curtos</h3><p class="muted">Cortes das lives, vídeos de produto, anúncios e depoimentos do estúdio, feitos com IA e finalizados por editores e designers.</p></div>
+    <div class="card"><span class="pill coral">Levva Contas</span><h3>Gestão de loja</h3><p class="muted">Configuração e operação da loja da marca no TikTok Shop: catálogo, ofertas, afiliados, anúncios de LIVE e relatórios.</p></div>
+  </div>
+  <div class="sec"><h3>Como as frentes se alimentam</h3>
+    <div class="flow">
+      <div><b>Estúdio grava</b><span>Depoimentos de compradores reais no shopping.</span></div>
+      <div><b>Conteúdo corta</b><span>Depoimentos e cortes de live viram vídeos curtos de produto.</span></div>
+      <div><b>Vídeos atraem</b><span>Os curtos aquecem a conta e chamam para a próxima live.</span></div>
+      <div><b>Live vende</b><span>O host demonstra, responde e fecha a venda no TikTok Shop.</span></div>
+      <div><b>Dados voltam</b><span>Perguntas e objeções da live viram roteiro do estúdio e do conteúdo.</span></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Pacotes para marcas</h3><p class="muted">Estrutura dos pacotes. Os preços saem do piloto, depois de medir o custo por hora de live.</p>
+    <div class="tablewrap"><table><thead><tr><th>Item</th><th>Essencial</th><th>Crescimento</th><th>Escala</th></tr></thead><tbody>
+      <tr><td>Lives por semana</td><td>2 de 2 h</td><td>4 de 2 h</td><td>Diárias, até 4 h</td></tr>
+      <tr><td>Onde transmite</td><td>Conta da marca</td><td>Conta da marca e conta setorial Levva</td><td>Conta da marca, conta setorial e co-host</td></tr>
+      <tr><td>Vídeos curtos por semana</td><td>10 cortes</td><td>20 cortes e 4 vídeos de produto</td><td>40 cortes, 8 vídeos de produto e 4 anúncios</td></tr>
+      <tr><td>Gestão da loja</td><td>Catálogo e ofertas</td><td>e afiliados</td><td>e anúncios de LIVE</td></tr>
+      <tr><td>Relatório</td><td>Mensal</td><td>Semanal</td><td>Semanal e reunião quinzenal</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Fases</h3>
+    <div class="grid g3">
+      <div class="soft"><span class="label muted">Meses 0 a 3</span><h4>Piloto</h4><p>1 baia de live, 1 setor, 2 ou 3 marcas, junto com o estúdio pop-up. Medir custo por hora, vendas por hora e retenção.</p></div>
+      <div class="soft"><span class="label muted">Meses 3 a 6</span><h4>Sala</h4><p>4 baias, 3 setores (moda, beleza, casa), primeira turma certificada de hosts, contas setoriais Levva no ar.</p></div>
+      <div class="soft"><span class="label muted">Meses 6 a 12</span><h4>Escala</h4><p>8 baias em 3 turnos, credenciamento como parceiro oficial do TikTok Shop, anúncios de LIVE, novos setores.</p></div>
+    </div>
+  </div>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#aplicacoes"><span>Anterior</span><b>Aplicações</b></a><a class="next" href="#sala"><span>Próximo</span><b>Sala de lives</b></a></nav>
+</section>
+
+<!-- 16 SALA DE LIVES -->
+<section class="chap" id="sala" data-title="Sala de lives" hidden>
+  <header><div class="eyebrow"><span class="n">16</span>Sala de lives</div><h2>Uma sala cheia de vendedores ao vivo.</h2>
+  <p class="lead">A Sala Levva é o hub de hosts. Baias de transmissão lado a lado, agrupadas por setor, com uma mesa de produção no centro e o estoque de amostras ao lado. Cada baia é um pequeno estúdio com a mesma luz, o mesmo som e a mesma rotina.</p></header>
+  <div class="diagram"><svg viewBox="0 0 760 400" role="img" aria-label="Planta da Sala Levva com 8 baias por setor, mesa de produção, amostras, controle e ensaio">
+    <rect x="10" y="10" width="740" height="380" rx="18" fill="#fffaf5" stroke="rgba(26,18,16,.15)"/>
+    <rect x="30" y="30" width="160" height="110" rx="14" fill="#ff4433"/><text x="44" y="56" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 01</text><text x="44" y="80" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Moda</text><circle cx="160" cy="110" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="160" cy="110" r="4" fill="#1a1210"/><rect x="44" y="102" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/><rect x="210" y="30" width="160" height="110" rx="14" fill="#ff4433"/><text x="224" y="56" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 02</text><text x="224" y="80" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Moda</text><circle cx="340" cy="110" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="340" cy="110" r="4" fill="#1a1210"/><rect x="224" y="102" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/><rect x="390" y="30" width="160" height="110" rx="14" fill="#f2b705"/><text x="404" y="56" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 03</text><text x="404" y="80" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Beleza</text><circle cx="520" cy="110" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="520" cy="110" r="4" fill="#1a1210"/><rect x="404" y="102" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/><rect x="570" y="30" width="160" height="110" rx="14" fill="#f2b705"/><text x="584" y="56" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 04</text><text x="584" y="80" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Beleza</text><circle cx="700" cy="110" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="700" cy="110" r="4" fill="#1a1210"/><rect x="584" y="102" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/><rect x="30" y="260" width="160" height="110" rx="14" fill="#dcefe9"/><text x="44" y="286" style="font:500 11px JetBrains Mono,monospace;fill:#0f6e5c">BAIA 05</text><text x="44" y="310" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#0f6e5c">Casa</text><circle cx="160" cy="340" r="12" fill="none" stroke="#0f6e5c" stroke-width="2"/><circle cx="160" cy="340" r="4" fill="#0f6e5c"/><rect x="44" y="332" width="70" height="14" rx="4" fill="#0f6e5c" opacity=".18"/><rect x="210" y="260" width="160" height="110" rx="14" fill="#dcefe9"/><text x="224" y="286" style="font:500 11px JetBrains Mono,monospace;fill:#0f6e5c">BAIA 06</text><text x="224" y="310" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#0f6e5c">Casa</text><circle cx="340" cy="340" r="12" fill="none" stroke="#0f6e5c" stroke-width="2"/><circle cx="340" cy="340" r="4" fill="#0f6e5c"/><rect x="224" y="332" width="70" height="14" rx="4" fill="#0f6e5c" opacity=".18"/><rect x="390" y="260" width="160" height="110" rx="14" fill="#f3e8db"/><text x="404" y="286" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 07</text><text x="404" y="310" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Eletrônicos</text><circle cx="520" cy="340" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="520" cy="340" r="4" fill="#1a1210"/><rect x="404" y="332" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/><rect x="570" y="260" width="160" height="110" rx="14" fill="#f3e8db"/><text x="584" y="286" style="font:500 11px JetBrains Mono,monospace;fill:#1a1210">BAIA 08</text><text x="584" y="310" style="font:800 18px Bricolage Grotesque,sans-serif;fill:#1a1210">Flex</text><circle cx="700" cy="340" r="12" fill="none" stroke="#1a1210" stroke-width="2"/><circle cx="700" cy="340" r="4" fill="#1a1210"/><rect x="584" y="332" width="70" height="14" rx="4" fill="#1a1210" opacity=".18"/>
+    <rect x="200" y="160" width="360" height="80" rx="14" fill="#1a1210"/>
+    <text x="380" y="196" text-anchor="middle" style="fill:#fbf3ea;font:600 14px Inter,sans-serif">Mesa de produção</text>
+    <text x="380" y="216" text-anchor="middle" style="fill:#a89c97">produtores, moderadores, analista</text>
+    <rect x="30" y="160" width="140" height="80" rx="14" fill="#f3e8db"/><text x="100" y="196" text-anchor="middle" style="fill:#1a1210;font:600 13px Inter,sans-serif">Amostras</text><text x="100" y="214" text-anchor="middle">estoque por marca</text>
+    <rect x="590" y="160" width="140" height="80" rx="14" fill="#f3e8db"/><text x="660" y="196" text-anchor="middle" style="fill:#1a1210;font:600 13px Inter,sans-serif">Ensaio</text><text x="660" y="214" text-anchor="middle">treino e roteiro</text>
+    <text x="380" y="382" text-anchor="middle">fileira inferior de baias · corredor central de 1,5 m · medidas de referência, ajustar ao imóvel</text>
+  </svg></div>
+  <div class="sec"><h3>Setores</h3><p class="muted">Escolhidos por demanda em live commerce (moda é 36% das transmissões no Brasil), facilidade de demonstrar ao vivo e permissão no TikTok Shop.</p>
+    <div class="tablewrap"><table><thead><tr><th>Setor</th><th>Fase</th><th>Por que</th><th>Cuidados</th></tr></thead><tbody>
+      <tr><td><span class="pill" style="background:#ff4433">Moda e acessórios</span></td><td>Piloto</td><td>Maior volume de lives; prova e caimento vendem ao vivo.</td><td>Tabela de medidas sempre na tela.</td></tr>
+      <tr><td><span class="pill" style="background:#f2b705">Beleza e cuidados</span></td><td>Sala</td><td>Textura e aplicação na hora convertem.</td><td>Só produtos regularizados na Anvisa; sem promessa de resultado.</td></tr>
+      <tr><td><span class="pill" style="background:#dcefe9;color:#0f6e5c">Casa e cozinha</span></td><td>Sala</td><td>Demonstração prática, ticket médio bom.</td><td>Voltagem e medidas faladas e escritas.</td></tr>
+      <tr><td><span class="pill">Eletrônicos e acessórios</span></td><td>Escala</td><td>Comparativo ao vivo responde dúvida técnica.</td><td>Homologação Anatel e garantia explicadas.</td></tr>
+      <tr><td><span class="pill">Esporte e bem-estar</span></td><td>Escala</td><td>Público fiel, compra recorrente.</td><td>Suplementos só com registro; nada de promessa de saúde.</td></tr>
+      <tr><td><span class="pill no">Fora</span></td><td>Nunca</td><td colspan="2">Álcool, tabaco e vape, medicamentos, produtos adultos, armas, falsificados e qualquer item da lista de proibidos do TikTok Shop.</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Carteira do host</h3>
+    <div class="grid g3">
+      <div class="card"><p class="big">1 setor</p><p class="muted">Cada host é especialista num setor e fala a língua daquele cliente.</p></div>
+      <div class="card"><p class="big">até 3 marcas</p><p class="muted">Poucas marcas por host, para conhecer cada produto de verdade.</p></div>
+      <div class="card"><p class="big">até 40 SKUs</p><p class="muted">Ativos na carteira ao mesmo tempo, com 5 a 8 produtos por live.</p></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Papéis</h3>
+    <div class="tablewrap"><table><thead><tr><th>Papel</th><th>Faz</th><th>Por baia</th></tr></thead><tbody>
+      <tr><td><b>Host</b></td><td>Apresenta, demonstra, responde e fecha a venda ao vivo.</td><td>1 por turno</td></tr>
+      <tr><td><b>Assistente de cena</b></td><td>Prepara e troca produtos, prova peças, segura para a câmera.</td><td>1 por turno nas lives de 4 h</td></tr>
+      <tr><td><b>Produtor de live</b></td><td>Opera o LIVE Manager: fixa produtos, abre ofertas, controla tempo.</td><td>1 para cada 2 baias</td></tr>
+      <tr><td><b>Moderador</b></td><td>Cuida do chat, fixa respostas, aplica filtros e bloqueios.</td><td>1 para cada 2 baias</td></tr>
+      <tr><td><b>Analista de performance</b></td><td>Lê os dados ao vivo e fecha o relatório em 24 h.</td><td>1 para a sala</td></tr>
+      <tr><td><b>Líder de setor</b></td><td>Dono da carteira de marcas, metas e treino dos hosts do setor.</td><td>1 por setor</td></tr>
+      <tr><td><b>Gerente da sala</b></td><td>Escala, qualidade, compliance e relação com os clientes.</td><td>1 para a sala</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Turnos</h3>
+    <div class="grid g3">
+      <div class="soft"><span class="label muted">10h às 13h</span><h4>Manhã</h4><p>Casa, beleza e lançamentos. Público que planeja a compra.</p></div>
+      <div class="soft"><span class="label muted">14h às 18h</span><h4>Tarde</h4><p>Moda e acessórios. Ofertas relâmpago no intervalo do trabalho.</p></div>
+      <div class="soft"><span class="label muted">19h às 23h</span><h4>Noite</h4><p>Horário nobre. Produtos herói de cada marca e as lives mais longas.</p></div>
+    </div>
+    <p class="muted">Com 8 baias e 3 turnos, a sala comporta até 24 sessões por dia. Os horários são o ponto de partida; ajuste por setor depois de 4 semanas de dados.</p>
+  </div>
+  <div class="sec"><h3>Padrão da baia</h3>
+    <dl class="kv">
+      <dt>Tamanho</dt><dd>3 x 3 m, isolamento acústico nas paredes e porta.</dd>
+      <dt>Fundo</dt><dd>Painel trocável: coral Levva nas contas setoriais, cenário da marca nas contas da marca.</dd>
+      <dt>Luz</dt><dd>2 softboxes frontais e 1 contraluz, 5600 K, IRC 95 ou mais.</dd>
+      <dt>Câmera</dt><dd>Celular em gimbal fixo ou câmera com TikTok LIVE Studio, enquadramento vertical.</dd>
+      <dt>Som</dt><dd>Microfone de lapela sem fio para host e assistente.</dd>
+      <dt>Retorno</dt><dd>Monitor com o chat e o produto fixado, na linha dos olhos do host.</dd>
+      <dt>Mesa</dt><dd>Bancada de demonstração de 1,2 m e prateleira com os produtos da live na ordem do roteiro.</dd>
+      <dt>Rede</dt><dd>Internet cabeada dedicada, 20 Mbps de upload por baia, com 4G de reserva.</dd>
+    </dl>
+  </div>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#live"><span>Anterior</span><b>Levva Live</b></a><a class="next" href="#playbook"><span>Próximo</span><b>Playbook do host</b></a></nav>
+</section>
+
+<!-- 17 PLAYBOOK DO HOST -->
+<section class="chap" id="playbook" data-title="Playbook do host" hidden>
+  <header><div class="eyebrow"><span class="n">17</span>Playbook do host</div><h2>Como a Levva vende ao vivo.</h2>
+  <p class="lead">O treinamento que todo host faz antes de entrar no ar, e que entregamos às marcas para que saibam como a live delas vai ser conduzida. O núcleo é um método simples de repetir em todo produto, a cada vez.</p></header>
+  <div class="card dark"><span class="label" style="color:var(--coral)">Método VEJA</span><p class="big" style="margin-top:8px">Ver, Explicar, Justificar, Agir.</p>
+    <div class="grid g4" style="margin-top:18px">
+      <div><h4 style="color:var(--coral)">Ver</h4><p class="muted">Mostre o produto em uso, perto da câmera, nos primeiros 10 segundos.</p></div>
+      <div><h4 style="color:var(--coral)">Explicar</h4><p class="muted">Um benefício em uma frase: "Esse tênis pesa 220 gramas."</p></div>
+      <div><h4 style="color:var(--coral)">Justificar</h4><p class="muted">Uma prova: teste ao vivo, avaliação real, depoimento do estúdio, comparação.</p></div>
+      <div><h4 style="color:var(--coral)">Agir</h4><p class="muted">Preço de live, produto fixado, chamada clara: "Toca no carrinho, é o item 3."</p></div>
+    </div></div>
+  <div class="sec"><h3>Roteiro de 60 minutos</h3><p class="muted">Repita o bloco do meio quantas vezes a live durar. Lives de 2 h usam o roteiro duas vezes, com os produtos herói nos dois ciclos.</p>
+    <div class="tablewrap"><table><thead><tr><th>Tempo</th><th>Bloco</th><th>O que fazer</th></tr></thead><tbody>
+      <tr><td class="mono">00 a 03</td><td><b>Abertura</b></td><td>Gancho com o produto herói na mão, oferta do dia em uma frase, convite para seguir.</td></tr>
+      <tr><td class="mono">03 a 15</td><td><b>Produto herói</b></td><td>VEJA completo. Responda as 3 primeiras perguntas pelo nome de quem perguntou.</td></tr>
+      <tr><td class="mono">15</td><td><b>Reinício</b></td><td>Dê boas-vindas a quem chegou, repita a oferta e o item no carrinho. A cada 15 minutos, sempre.</td></tr>
+      <tr><td class="mono">15 a 35</td><td><b>Produtos 2, 3 e 4</b></td><td>6 a 8 minutos por produto, VEJA em cada um. Combine produtos que se completam.</td></tr>
+      <tr><td class="mono">35 a 40</td><td><b>Oferta relâmpago</b></td><td>Quando a audiência cair. Tempo real no cronômetro do TikTok, estoque real.</td></tr>
+      <tr><td class="mono">40 a 50</td><td><b>Perguntas</b></td><td>Responda dúvidas acumuladas, mostre detalhes, tamanhos, medidas.</td></tr>
+      <tr><td class="mono">50 a 60</td><td><b>Fechamento</b></td><td>Volta ao herói, aviso de 10 minutos, resumo das ofertas, agenda da próxima live.</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Falas modelo</h3>
+    <div class="grid g2">
+      <div class="soft"><span class="label muted">Abertura</span><p class="quote" style="font-size:20px">Boa noite! Esse é o tênis que mais vendeu na loja esta semana, e hoje ele está com R$ 40 de desconto só aqui na live.</p></div>
+      <div class="soft"><span class="label muted">Reinício</span><p class="quote" style="font-size:20px">Quem chegou agora: estamos mostrando a coleção de verão da Passo Certo. O item 1 do carrinho está com frete grátis até o fim da live.</p></div>
+      <div class="soft"><span class="label muted">Objeção de tamanho</span><p class="quote" style="font-size:20px">Boa pergunta, Ana. Eu calço 37 e estou com o 37. A tabela de medidas está no item, e a troca é grátis em 7 dias.</p></div>
+      <div class="soft"><span class="label muted">Fechamento</span><p class="quote" style="font-size:20px">Faltam 10 minutos para a oferta acabar. Amanhã às 19h tem live de sandálias, segue a conta para ser avisado.</p></div>
+    </div>
+  </div>
+  <div class="sec"><div class="dd">
+    <div class="do"><h4>Sempre</h4><ul><li>Produto na mão e em uso, não só na prateleira.</li><li>Fixar no carrinho o produto que está sendo mostrado.</li><li>Chamar as pessoas pelo nome do perfil.</li><li>Dizer preço, frete e prazo de entrega com clareza.</li><li>Agradecer cada compra em voz alta, sem expor dados da pessoa.</li></ul></div>
+    <div class="dont"><h4>Nunca</h4><ul><li>Falsa urgência: "últimas unidades" sem estoque real ou cronômetro falso.</li><li>Preço "de" inventado. Só referência real, como exige o Código de Defesa do Consumidor.</li><li>Promessa de resultado em beleza, saúde ou emagrecimento.</li><li>Imagem parada, vídeo em loop ou live gravada passada como ao vivo.</li><li>Avatar ou voz de IA sem o rótulo de conteúdo gerado por IA.</li><li>Menores de 18 anos apresentando ou aparecendo na live.</li></ul></div>
+  </div></div>
+  <div class="sec"><h3>Checklist antes de entrar no ar</h3>
+    <ul class="check">
+      <li>Conta elegível: loja com CNPJ, conta com mais de 30 dias, sem violação nos últimos 90 dias, verificação em duas etapas ativa.</li>
+      <li>Produtos da live cadastrados, aprovados e com estoque conferido.</li>
+      <li>Nenhum produto proibido ou regulado sem documentação na prateleira.</li>
+      <li>Preços e cupons de live configurados e testados.</li>
+      <li>Roteiro aprovado pela marca com 48 horas de antecedência.</li>
+      <li>Moderador escalado, filtros de comentário e palavras bloqueadas ativos.</li>
+      <li>Luz, som, rede e bateria testados com 15 minutos de antecedência.</li>
+      <li>Fundo e figurino certos para a conta: marca ou setor Levva.</li>
+    </ul>
+  </div>
+  <div class="sec"><h3>Trilha de formação</h3>
+    <div class="flow">
+      <div><b>Semana 1: Fundamentos</b><span>Marca Levva, regras do TikTok LIVE e do Shop, Código de Defesa do Consumidor, ferramentas.</span></div>
+      <div><b>Semana 2: Técnica</b><span>Método VEJA, abertura, reinício, objeções, oferta relâmpago, leitura de dados.</span></div>
+      <div><b>Semana 3: Prática</b><span>Ensaios gravados e lives de treino em conta de teste, com avaliação do líder.</span></div>
+      <div><b>Semana 4: Certificação</b><span>2 lives supervisionadas e prova de compliance. Nota mínima de 16 em 20.</span></div>
+      <div><b>Sempre</b><span>Revisão semanal de cortes com o líder de setor.</span></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Avaliação de cada live</h3><p class="muted">O líder de setor dá de 0 a 2 pontos em cada critério. A média das últimas 4 lives define o nível do host.</p>
+    <div class="tablewrap"><table><thead><tr><th>Critério</th><th>2 pontos quando</th></tr></thead><tbody>
+      <tr><td>Abertura</td><td>Produto herói e oferta nos primeiros 30 segundos.</td></tr>
+      <tr><td>Produto em uso</td><td>Todos os produtos mostrados em uso, perto da câmera.</td></tr>
+      <tr><td>VEJA completo</td><td>As quatro etapas em todos os produtos.</td></tr>
+      <tr><td>Carrinho certo</td><td>Produto fixado sempre igual ao produto na mão.</td></tr>
+      <tr><td>Conversa</td><td>Perguntas respondidas pelo nome em menos de 1 minuto.</td></tr>
+      <tr><td>Reinício</td><td>A cada 15 minutos, sem falhar.</td></tr>
+      <tr><td>Oferta honesta</td><td>Preço, frete e prazo claros, sem falsa urgência.</td></tr>
+      <tr><td>Compliance</td><td>Nenhum alerta ou interrupção da plataforma.</td></tr>
+      <tr><td>Fechamento</td><td>Aviso de 10 minutos, resumo e agenda da próxima live.</td></tr>
+      <tr><td>Marca</td><td>Voz Levva, fundo e figurino certos, energia do início ao fim.</td></tr>
+    </tbody></table></div>
+    <div class="grid g4" style="margin-top:16px">
+      <div class="soft"><h4>Trainee</h4><p>Em formação. Só lives de treino.</p></div>
+      <div class="soft"><h4>Host</h4><p>Certificado. Nota 16 ou mais.</p></div>
+      <div class="soft"><h4>Host sênior</h4><p>Nota 18 ou mais e vendas por hora acima da média do setor por 3 meses.</p></div>
+      <div class="soft"><h4>Líder de setor</h4><p>Sênior que treina hosts e responde pela carteira.</p></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Métricas</h3>
+    <div class="tablewrap"><table><thead><tr><th>Métrica</th><th>O que é</th><th>Para que serve</th></tr></thead><tbody>
+      <tr><td><b>GMV</b></td><td>Valor total vendido na live.</td><td>Resultado da marca.</td></tr>
+      <tr><td><b>Vendas por hora</b></td><td>GMV dividido pelas horas no ar.</td><td>Comparar hosts, turnos e setores.</td></tr>
+      <tr><td><b>GPM</b></td><td>GMV por mil visualizações.</td><td>Qualidade da venda, independente do alcance.</td></tr>
+      <tr><td><b>CTR do produto</b></td><td>Cliques no produto sobre visualizações.</td><td>Se a demonstração desperta interesse.</td></tr>
+      <tr><td><b>Conversão</b></td><td>Pedidos sobre cliques no produto.</td><td>Se preço, oferta e prova convencem.</td></tr>
+      <tr><td><b>Tempo médio assistido</b></td><td>Quanto tempo cada pessoa fica.</td><td>Ritmo e energia do host.</td></tr>
+      <tr><td><b>Taxa de devolução</b></td><td>Pedidos devolvidos sobre pedidos.</td><td>Se a live prometeu o que o produto entrega.</td></tr>
+    </tbody></table></div>
+    <p class="muted">Metas por marca só depois de 4 lives de linha de base. Nada de meta copiada de outro setor.</p>
+  </div>
+  <div class="sec"><h3>O que a marca entrega para a live</h3><p class="muted">O kit de entrada que passamos a cada empresa cliente no primeiro dia.</p>
+    <div class="grid g2">
+      <div class="card"><h4>Ficha de produto, por SKU</h4><ul><li>Nome, SKU, preço cheio e preço de live autorizado.</li><li>O benefício principal em uma frase.</li><li>Três provas: teste, avaliação, dado técnico.</li><li>Dúvidas frequentes e respostas aprovadas.</li><li>Restrições regulatórias e o que não pode ser dito.</li><li>Estoque reservado para a live.</li></ul></div>
+      <div class="card"><h4>Combinados</h4><ul><li>2 amostras de cada produto herói na sala.</li><li>Limites de desconto, cupons e frete grátis.</li><li>Aprovação do roteiro em até 48 horas.</li><li>Calendário mensal de lives e lançamentos.</li><li>Um ponto focal para decisões durante a live.</li><li>Relatório da Levva em até 24 horas depois de cada live.</li></ul></div>
+    </div>
+  </div>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#sala"><span>Anterior</span><b>Sala de lives</b></a><a class="next" href="#contas"><span>Próximo</span><b>Contas</b></a></nav>
+</section>
+
+<!-- 18 ARQUITETURA DE CONTAS -->
+<section class="chap" id="contas" data-title="Contas" hidden>
+  <header><div class="eyebrow"><span class="n">18</span>Arquitetura de contas</div><h2>Quem é dono de qual conta.</h2>
+  <p class="lead">No Brasil, só empresas com CNPJ vendem no TikTok Shop. Por isso a venda acontece sempre na loja da marca cliente; a Levva opera com acesso delegado e constrói, em paralelo, contas próprias por setor que vendem como afiliadas. A marca fica com a venda; a Levva fica com a audiência que construiu.</p></header>
+  <div class="diagram"><svg viewBox="0 0 860 330" role="img" aria-label="Arquitetura de contas: loja da marca no TikTok Shop, conta oficial da marca, contas setoriais Levva como afiliadas e conta institucional">
+    <rect x="300" y="14" width="260" height="70" rx="16" fill="#1a1210"/>
+    <text x="430" y="44" text-anchor="middle" style="fill:#fbf3ea;font:700 15px Inter,sans-serif">Loja da marca no TikTok Shop</text>
+    <text x="430" y="64" text-anchor="middle" style="fill:#a89c97">CNPJ do cliente · Seller Center</text>
+    <path d="M430 84V112M150 112H710M150 112V140M430 112V140M710 112V140" stroke="rgba(26,18,16,.25)" stroke-width="1.5" fill="none"/>
+    <rect x="30" y="140" width="240" height="110" rx="16" fill="#f3e8db"/>
+    <rect x="310" y="140" width="240" height="110" rx="16" fill="#ffe4df"/>
+    <rect x="590" y="140" width="240" height="110" rx="16" fill="#f3e8db"/>
+    <g style="font:700 14px Inter,sans-serif;fill:#1a1210"><text x="50" y="172">Conta oficial da marca</text><text x="330" y="172">Contas setoriais Levva</text><text x="610" y="172">Acesso Levva à loja</text></g>
+    <g style="font:500 12px Inter,sans-serif;fill:#6b5f5b">
+      <text x="50" y="196">@marca · vinculada à loja</text><text x="50" y="214">lives oficiais da marca</text><text x="50" y="232">dona: a marca</text>
+      <text x="330" y="196">@levva.moda, .beleza, .casa</text><text x="330" y="214">afiliadas, com comissão</text><text x="330" y="232">dona: a Levva</text>
+      <text x="610" y="196">usuário com papel definido</text><text x="610" y="214">catálogo, ofertas e anúncios</text><text x="610" y="232">sem senha compartilhada</text></g>
+    <rect x="250" y="270" width="360" height="46" rx="14" fill="#fffaf5" stroke="rgba(26,18,16,.12)"/>
+    <text x="430" y="298" text-anchor="middle" style="font:600 13px Inter,sans-serif;fill:#1a1210">@levva institucional · B2B, bastidores, vagas</text>
+  </svg></div>
+  <div class="sec"><h3>Cada conta, um papel</h3>
+    <div class="tablewrap"><table><thead><tr><th>Conta</th><th>Dona</th><th>Para que</th><th>Dinheiro</th></tr></thead><tbody>
+      <tr><td><b>Loja da marca</b> (Seller Center)</td><td>Marca</td><td>Catálogo, pedidos, ofertas, logística.</td><td>A venda cai para a marca.</td></tr>
+      <tr><td><b>Conta oficial @marca</b></td><td>Marca</td><td>Lives oficiais com host Levva e cenário da marca.</td><td>Mensalidade de serviço para a Levva.</td></tr>
+      <tr><td><b>Contas setoriais @levva.setor</b></td><td>Levva</td><td>Lives multimarca do setor, cortes, audiência própria.</td><td>Comissão de afiliado sobre a venda.</td></tr>
+      <tr><td><b>@levva</b></td><td>Levva</td><td>Marca institucional, cases, bastidores da sala, recrutamento de hosts.</td><td>Não vende produto de cliente.</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Nomes e perfis</h3>
+    <div class="grid g3">
+      <div class="soft"><h4>Usuário</h4><p class="mono">@levva.moda · @levva.beleza · @levva.casa</p><p>Sempre "levva" + ponto + setor em português.</p></div>
+      <div class="soft"><h4>Nome exibido</h4><p class="mono">Levva Moda · ao vivo 19h</p><p>Setor e horário fixo da live principal.</p></div>
+      <div class="soft"><h4>Host na tela</h4><p class="mono">Ana · Levva Moda</p><p>Primeiro nome do host e setor, na legenda de abertura e no nome na tela.</p></div>
+    </div>
+    <p class="muted">Avatar das contas setoriais: o símbolo Levva em papel sobre coral. Bio: o que a conta vende, o horário das lives e "Gravado no estúdio Levva".</p>
+  </div>
+  <div class="sec"><h3>Segurança</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Regras fixas</h4><ul><li>Verificação em duas etapas em todas as contas, sempre.</li><li>Senhas num cofre da empresa, nunca em planilha ou conversa.</li><li>Acesso às lojas dos clientes só por usuário com papel, nunca com a senha do dono.</li><li>Um aparelho dedicado por conta setorial, que não sai da sala.</li><li>Hosts não usam contas pessoais para vender produto de cliente.</li><li>Saída de colaborador: acesso removido no mesmo dia.</li></ul></div>
+      <div class="card"><h4>Conta nova: aquecimento de 30 dias</h4><ul><li>O TikTok pede conta com mais de 30 dias e 90 dias sem violação para vender ao vivo.</li><li>Dias 1 a 30: 1 a 2 vídeos curtos por dia do setor, sem venda.</li><li>Dias 15 a 30: lives curtas de bastidor, sem carrinho.</li><li>Dia 31 em diante: primeira live de venda, se a conta estiver saudável.</li><li>Confirme os requisitos no Seller Center antes de cada etapa; eles mudam.</li></ul></div>
+    </div>
+  </div>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#playbook"><span>Anterior</span><b>Playbook do host</b></a><a class="next" href="#conteudo"><span>Próximo</span><b>Conteúdo</b></a></nav>
+</section>
+
+<!-- 19 PRODUÇÃO DE CONTEÚDO -->
+<section class="chap" id="conteudo" data-title="Conteúdo" hidden>
+  <header><div class="eyebrow"><span class="n">19</span>Levva Conteúdo</div><h2>IA para escala, gente para qualidade.</h2>
+  <p class="lead">A IA faz o trabalho repetitivo: cortar, legendar, gerar variações e rascunhos. Editores e designers decidem, finalizam e respondem pela qualidade. Nenhuma peça sai sem revisão humana.</p></header>
+  <div class="flow">
+    <div><b>Fontes</b><span>Gravações do estúdio, lives da sala, catálogo e fotos das marcas.</span></div>
+    <div><b>Rascunho com IA</b><span>Cortes automáticos, legendas, roteiros base, variações de texto e de capa.</span></div>
+    <div><b>Acabamento</b><span>Editores escolhem os melhores cortes; designers fazem capas e anúncios.</span></div>
+    <div><b>Revisão</b><span>Marca, compliance, autorização de imagem e rótulo de IA quando exigido.</span></div>
+    <div><b>Publicação e dados</b><span>Calendário por conta; o que performa vira modelo.</span></div>
+  </div>
+  <div class="sec"><h3>O que a IA pode e não pode</h3>
+    <div class="dd">
+      <div class="do"><h4>Pode</h4><ul><li>Encontrar os melhores trechos de uma live e cortar.</li><li>Gerar legendas, traduzir e revisar texto.</li><li>Sugerir roteiros, títulos e variações de anúncio.</li><li>Limpar fundo de foto de produto e criar cenários neutros.</li><li>Montar storyboards e rascunhos de layout.</li></ul></div>
+      <div class="dont"><h4>Não pode</h4><ul><li>Criar ou alterar rosto, voz ou fala de cliente real.</li><li>Inventar depoimento, avaliação ou resultado.</li><li>Mudar cor, medida ou acabamento do produto.</li><li>Publicar avatar ou voz sintética sem o rótulo de IA.</li><li>Ir ao ar sem revisão de uma pessoa.</li></ul></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Quem faz o quê</h3>
+    <div class="tablewrap"><table><thead><tr><th>Papel</th><th>Responde por</th></tr></thead><tbody>
+      <tr><td><b>Estrategista de conteúdo</b></td><td>Calendário por conta, pilares de mensagem, briefing semanal.</td></tr>
+      <tr><td><b>Editor com IA</b></td><td>Cortes de live e do estúdio, legendas, versões por formato, 20 a 40 peças por semana.</td></tr>
+      <tr><td><b>Designer</b></td><td>Capas, anúncios, cenários das marcas, modelos novos.</td></tr>
+      <tr><td><b>Roteirista</b></td><td>Roteiros de live e de vídeo de produto, falas modelo, banco de respostas.</td></tr>
+      <tr><td><b>Revisor de marca</b></td><td>Checklist de publicação, compliance, autorização e rótulo de IA.</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="sec"><h3>Semana padrão</h3>
+    <div class="grid g4">
+      <div class="soft"><span class="label muted">Segunda</span><h4>Briefing</h4><p>Dados da semana anterior, produtos foco, calendário de lives.</p></div>
+      <div class="soft"><span class="label muted">Terça e quarta</span><h4>Produção</h4><p>Cortes, vídeos de produto e anúncios. Rascunho com IA, acabamento humano.</p></div>
+      <div class="soft"><span class="label muted">Quinta</span><h4>Revisão</h4><p>Revisor de marca aprova; a marca cliente aprova o que exige.</p></div>
+      <div class="soft"><span class="label muted">Sexta</span><h4>Agenda</h4><p>Publicações programadas e chamadas para as lives da semana seguinte.</p></div>
+    </div>
+  </div>
+  <div class="sec"><h3>Formatos</h3>
+    <div class="tablewrap"><table><thead><tr><th>Formato</th><th>Duração</th><th>Origem</th><th>Regra</th></tr></thead><tbody>
+      <tr><td>Corte de live</td><td>15 a 45 s</td><td>Live da sala</td><td>Um produto por corte, legenda e chamada para a próxima live.</td></tr>
+      <tr><td>Depoimento</td><td>até 30 s</td><td>Levva Estúdio</td><td>Kit de vídeo do capítulo 11, com selo de incentivo.</td></tr>
+      <tr><td>Vídeo de produto</td><td>15 a 30 s</td><td>Gravação na baia</td><td>Método VEJA em versão curta.</td></tr>
+      <tr><td>Anúncio de LIVE</td><td>9 a 15 s</td><td>Corte ou vídeo de produto</td><td>Gancho nos 2 primeiros segundos, horário da live na tela.</td></tr>
+      <tr><td>Chamada de live</td><td>até 10 s</td><td>Host na baia</td><td>Data, hora, produto herói e oferta.</td></tr>
+    </tbody></table></div>
+  </div>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#contas"><span>Anterior</span><b>Contas</b></a><a class="next" href="#parceiros"><span>Próximo</span><b>Parceiros</b></a></nav>
+</section>
+
+<!-- 20 PARCEIROS -->
 <section class="chap" id="parceiros" data-title="Parceiros" hidden>
-  <header><div class="eyebrow"><span class="n">15</span>Parceiros</div><h2>Levva com shoppings e lojas.</h2>
+  <header><div class="eyebrow"><span class="n">20</span>Parceiros</div><h2>Levva com shoppings e lojas.</h2>
   <p class="lead">Para escalar, a Levva aparece ao lado de muitas marcas. A regra geral: no conteúdo da loja, a loja lidera e a Levva assina pequeno; no estúdio, a Levva lidera e o shopping aparece como local.</p></header>
   <div class="lockups">
     <div class="lk"><div class="art"><svg viewBox="0 0 402 100" aria-hidden="true"><g fill="none" stroke="#1a1210" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M54 12H72A16 16 0 0 1 88 28V46"/><path d="M12 54V72A16 16 0 0 0 28 88H46"/></g><circle cx="50" cy="50" r="12" fill="#ff4433"/><g fill="#1a1210"><path d="M122.0 88.0V12.0H139.5885714285714V88.0Z"/><path d="M173.3542857142857 89.52Q165.21142857142857 89.52 159.72857142857143 87.18571428571428Q154.24571428571429 84.85142857142857 150.88 80.78Q147.5142857142857 76.70857142857143 146.04857142857142 71.49714285714285Q144.58285714285714 66.28571428571428 144.58285714285714 60.53142857142858Q144.58285714285714 54.34285714285714 146.15714285714284 48.69714285714286Q147.73142857142858 43.05142857142857 151.04285714285714 38.65428571428572Q154.3542857142857 34.25714285714286 159.62 31.705714285714286Q164.88571428571427 29.154285714285713 172.26857142857142 29.154285714285713Q179.65142857142857 29.154285714285713 184.91714285714284 31.705714285714286Q190.18285714285713 34.25714285714286 193.33142857142855 38.817142857142855Q196.48 43.37714285714286 197.40285714285716 49.34857142857143Q198.3257142857143 55.32 197.13142857142856 62.268571428571434L155.54857142857142 62.92V53.36571428571429L183.66857142857143 52.822857142857146L181.38857142857142 58.36Q182.04 53.36571428571429 181.22571428571428 49.94571428571429Q180.41142857142856 46.52571428571429 178.24 44.73428571428572Q176.06857142857143 42.94285714285714 172.26857142857142 42.94285714285714Q168.25142857142856 42.94285714285714 165.86285714285714 45.00571428571429Q163.4742857142857 47.06857142857143 162.49714285714285 50.81428571428572Q161.51999999999998 54.56 161.51999999999998 59.66285714285714Q161.51999999999998 68.45714285714286 164.45142857142855 72.47428571428571Q167.38285714285715 76.49142857142857 173.46285714285713 76.49142857142857Q176.06857142857143 76.49142857142857 177.8057142857143 75.84Q179.54285714285714 75.18857142857144 180.62857142857143 73.94Q181.71428571428572 72.69142857142857 182.14857142857142 70.9Q182.58285714285714 69.10857142857142 182.4742857142857 66.82857142857142L198.54285714285714 67.69714285714286Q198.86857142857144 71.28 197.83714285714285 75.08Q196.8057142857143 78.88 193.98285714285714 82.13714285714286Q191.16 85.39428571428572 186.11142857142858 87.45714285714286Q181.06285714285713 89.52 173.3542857142857 89.52Z"/><path d="M216.78285714285715 88.0 199.52 30.674285714285716H218.1942857142857L228.0742857142857 73.45142857142858H228.50857142857143L238.82285714285715 30.674285714285716H256.4114285714286L239.14857142857142 88.0Z"/><path d="M273.02285714285716 88.0 255.76000000000002 30.674285714285716H274.4342857142857L284.31428571428575 73.45142857142858H284.74857142857144L295.0628571428571 30.674285714285716H312.6514285714286L295.3885714285714 88.0Z"/><g><path d="M342.2914285714286 89.52Q334.03999999999996 89.52 327.6342857142857 86.20857142857142Q321.2285714285714 82.89714285714285 317.64571428571423 76.22Q314.0628571428571 69.54285714285714 314.0628571428571 59.44571428571429Q314.0628571428571 48.91428571428572 317.80857142857144 42.23714285714286Q321.5542857142857 35.56 328.01428571428573 32.35714285714286Q334.4742857142857 29.154285714285713 342.6171428571428 29.154285714285713Q351.0857142857143 29.154285714285713 357.4371428571428 32.465714285714284Q363.7885714285714 35.777142857142856 367.3171428571428 42.45428571428572Q370.8457142857143 49.13142857142857 370.8457142857143 59.33714285714286Q370.8457142857143 69.86857142857143 367.1 76.54571428571428Q363.3542857142857 83.22285714285714 356.89428571428573 86.37142857142857Q350.4342857142857 89.52 342.2914285714286 89.52ZM342.7257142857143 76.6Q346.09142857142854 76.6 348.3714285714285 74.69999999999999Q350.65142857142854 72.8 351.8457142857143 69.10857142857142Q353.03999999999996 65.41714285714286 353.03999999999996 60.31428571428572Q353.03999999999996 54.66857142857143 351.7371428571428 50.81428571428572Q350.4342857142857 46.96 347.9914285714285 44.89714285714285Q345.5485714285714 42.83428571428571 342.0742857142857 42.83428571428571Q338.81714285714287 42.83428571428571 336.53714285714284 44.73428571428572Q334.25714285714287 46.63428571428572 333.0628571428571 50.325714285714284Q331.8685714285714 54.01714285714286 331.8685714285714 59.22857142857143Q331.8685714285714 67.48 334.74571428571426 72.03999999999999Q337.62285714285713 76.6 342.7257142857143 76.6Z"/><path d="M353.26 88.00V39.47A8.79 8.79 0 0 1 370.85 39.47V88.00Z"/></g></g><circle cx="387.24" cy="79.21" r="8.79" fill="#ff4433"/></svg><span class="sep"></span><span class="partner">Shopping Vila</span></div><div class="cap"><b>Levva + shopping</b><span>Mesma altura visual, fio de 2 px em tinta, espaço igual ao diâmetro do ponto de cada lado.</span></div></div>
@@ -903,12 +1198,12 @@ td.yes::before { content: "Sim "; }
     <div class="do"><h4>O parceiro pode</h4><ul><li>Usar o selo de endosso e as versões oficiais da logo.</li><li>Citar "estúdio Levva" no texto.</li><li>Publicar os vídeos dentro do prazo autorizado.</li></ul></div>
     <div class="dont"><h4>O parceiro não pode</h4><ul><li>Alterar cores, recortar o símbolo ou tirar o ponto final.</li><li>Usar a marca em produto, embalagem ou promoção sem acordo escrito.</li><li>Publicar vídeo depois do prazo ou sem o selo de incentivo.</li></ul></div>
   </div></div>
-  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#aplicacoes"><span>Anterior</span><b>Aplicações</b></a><a class="next" href="#governanca"><span>Próximo</span><b>Governança</b></a></nav>
+  <nav class="pager" aria-label="Navegação entre capítulos"><a href="#conteudo"><span>Anterior</span><b>Conteúdo</b></a><a class="next" href="#governanca"><span>Próximo</span><b>Governança</b></a></nav>
 </section>
 
-<!-- 16 GOVERNANÇA -->
+<!-- 21 GOVERNANÇA -->
 <section class="chap" id="governanca" data-title="Governança" hidden>
-  <header><div class="eyebrow"><span class="n">16</span>Governança</div><h2>Como manter a marca inteira enquanto cresce.</h2>
+  <header><div class="eyebrow"><span class="n">21</span>Governança</div><h2>Como manter a marca inteira enquanto cresce.</h2>
   <p class="lead">Uma marca escala quando qualquer pessoa da equipe, de um fornecedor ou de um parceiro consegue aplicá-la certo sem perguntar. Este capítulo diz quem decide, como aprovar e onde estão os arquivos.</p></header>
   <div class="sec" style="margin-top:0"><h3>Fluxo de aprovação</h3>
     <div class="flow">
@@ -925,6 +1220,7 @@ td.yes::before { content: "Sim "; }
       <li>Ponto final coral presente na palavra.</li>
       <li>Cores só da paleta, com coral em no máximo 10% da peça (exceto campanhas coral).</li>
       <li>Bricolage só em títulos; Inter no resto.</li>
+      <li>Caixas sem contorno preto: fio de 1 px a 9% ou nenhum.</li>
       <li>Contraste de texto de 4,5:1 ou mais.</li>
       <li>Texto revisado: caixa de frase, sem jargão, sem travessão longo, um ponto de exclamação no máximo.</li>
       <li>Nenhuma promessa de vendas garantidas ou pesquisa representativa.</li>

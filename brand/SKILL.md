@@ -1,12 +1,12 @@
 ---
 name: levva-design
-description: Use esta skill para criar telas, sites, protótipos, peças de marketing, sinalização de estúdio e código de interface com a identidade da Levva (antes MONI e LiveHub), o estúdio de conteúdo pós-compra dentro de shoppings. Traz logo, tokens, tipografia, voz, botões e regras de uso.
+description: Use esta skill para criar telas, sites, protótipos, peças de marketing, sinalização de estúdio, materiais de live commerce e código de interface com a identidade da Levva (antes MONI e LiveHub): estúdios de conteúdo pós-compra em shoppings e sala de lives no TikTok Shop. Traz logo, tokens, tipografia, voz, botões e regras de uso.
 user-invocable: true
 ---
 
 # Levva: skill de design
 
-Leia `README.md` nesta pasta antes de criar qualquer coisa. Ele é o livro de marca em texto. O guia completo, com mensagem, voz por situação, kit de vídeo, estúdios, co-branding e checklist de publicação, está em `brand-guide.html`.
+Leia `README.md` nesta pasta antes de criar qualquer coisa. Ele é o livro de marca em texto. O guia completo, com mensagem, voz por situação, kit de vídeo, estúdios, sala de lives, playbook do host, arquitetura de contas do TikTok Shop, produção de conteúdo com IA, co-branding e checklist de publicação, está em `brand-guide.html`.
 
 ## Arquivos
 
@@ -26,7 +26,7 @@ Leia `README.md` nesta pasta antes de criar qualquer coisa. Ele é o livro de ma
    - Principal: `background: var(--coral); color: var(--on-coral)`, altura 50 / 40 / 30 px.
    - Secundário: tinta a 8% (`rgba(26, 18, 16, .08)`) com texto tinta. Sobre fundo escuro: papel a 14%.
    - Hover `filter: brightness(.95)`; pressionado `brightness(.86)` e `scale(.98)`; 120 ms com `cubic-bezier(.2, .8, .2, 1)`.
-6. Cartões e campos: borda de 2 px em tinta, cantos `radius-lg` (16 px). Sombra chapada (`shadow-flat-md`) só no cartão que precisa se destacar.
+6. Estilo Apple nas caixas: sem contorno preto. Quando precisar separar, fio de 1 px em `hairline` (tinta a 9%). Campos com preenchimento `fill-quiet`, sem borda. Cantos de 20 px em cartões. Sombra só em quem flutua (`shadow-lift`).
 7. Elementos da marca: moldura de visor (cantos inferior esquerdo e superior direito), selo REC (pílula tinta, ponto coral, tempo em mono) e padrão de visores. Sem gradientes, sem vidro fosco, sem emoji como ícone.
 8. Voz: "você", frases curtas, número antes do adjetivo, caixa de frase. CAIXA ALTA só em selos (AO VIVO, GRAVANDO, EM ANÁLISE, APROVADO). Não prometa vendas garantidas nem pesquisa representativa.
 9. Português brasileiro e sem o caractere de travessão longo.

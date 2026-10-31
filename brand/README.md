@@ -4,7 +4,7 @@
 
 A Levva instala estúdios compactos dentro de shoppings e transforma compras reais em vídeos prontos para as lojas usarem, e cada gravação em aprendizado sobre como os clientes enxergam os produtos. É o nome atual do projeto que antes se chamou LiveHub e MONI. Este sistema herda a base visual do design system MONI e troca o nome, o símbolo e a animação.
 
-Brand Guide completo (17 capítulos, da estratégia à governança): `brand-guide.html` nesta pasta, publicado em https://claude.ai/artifact/PWT5gnq7ianwrybqev57SJ. Brand book visual resumido: `brandbook.html`, publicado em https://claude.ai/artifact/KgTwNiUxqhd6HtEUdrATyw. Design system no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
+Brand Guide completo (22 capítulos, da estratégia ao live commerce e à governança): `brand-guide.html` nesta pasta, publicado em https://claude.ai/artifact/PWT5gnq7ianwrybqev57SJ. Brand book visual resumido: `brandbook.html`, publicado em https://claude.ai/artifact/KgTwNiUxqhd6HtEUdrATyw. Design system no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
 
 ## O que a Levva faz
 
@@ -70,7 +70,7 @@ Bricolage Grotesque (`display`) para títulos curtos e números grandes, Inter (
 ## Elementos gráficos
 
 - Botões no estilo Apple: preenchimento chapado, sem borda e sem sombra, cápsula (`radius-pill`), Inter 600. Principal em `coral` com texto `on-coral`; secundário em tinta a 8%. Pressionado escurece 14% e reduz para 98%.
-- Borda de 2 px em tinta (`border-width`) em cartões, campos e modais.
+- Caixas no estilo Apple, sem contorno preto: quando precisar separar, fio de 1 px em `hairline`. Campos com preenchimento `fill-quiet`. Sombra suave (`shadow-lift`) só em elementos que flutuam.
 - Sombra chapada sem desfoque (`shadow-flat-sm/md/lg`). A suave (`shadow-soft`) só em tabelas e superfícies densas.
 - Moldura de visor: os dois cantos do símbolo enquadram títulos, fotos e telas, sempre na diagonal canto inferior esquerdo e superior direito.
 - Padrão de visores: o símbolo em grade, tinta sobre coral ou papel sobre tinta. Nunca atrás de texto pequeno.
@@ -90,7 +90,7 @@ Mantidos: paleta, tipografia, bordas de 2 px, sombra chapada, pílulas, voz dire
 ## Arquivos
 
 - `SKILL.md`: skill levva-design, para gerar telas e peças com a marca.
-- `brand-guide.html`: Brand Guide completo, com essência, público, mensagem, voz, kit de vídeo, estúdios, parceiros e governança (abra no navegador).
+- `brand-guide.html`: Brand Guide completo, com essência, público, mensagem, voz, kit de vídeo, estúdios, Levva Live (sala de lives, playbook do host, contas do TikTok Shop, conteúdo com IA), parceiros e governança (abra no navegador).
 - `brandbook.html`: brand book visual resumido.
 - `logos/`: 12 versões em SVG, ver `logos/README.md`.
 - `animacao/`: vídeos MP4 1920 x 1080, SVG animado e página HTML da animação.

@@ -1,0 +1,63 @@
+06-26 Proposta de Negócio: Estúdio de Live Commerce em Shoppings
+Proposta de Negócio: Estúdio de Live Commerce em Shoppings
+
+[Image]
+
+O apresentador expõe um plano para criar estúdios de “live commerce” em shoppings (“Live Hub Shopping”), onde consumidores recebem descontos para gravar depoimentos ao vivo sobre suas compras, gerando conteúdo autêntico que impulsiona vendas e tráfego. O documento organiza o conceito, operação, finanças, desafios, proposta societária e filosofia, com ações diretas a serem tomadas.
+
+Apresentação do Modelo de Negócio
+O “Live Hub Shopping” consiste em instalar um estúdio de gravação dentro de shopping centers para capturar depoimentos ao vivo de consumidores sobre compras recém-realizadas. O consumidor explica por que comprou, mostra o produto ou o resultado (por exemplo, roupas no corpo), e valida a experiência como prova social. Inspirado no mercado chinês, onde o live commerce já responde por 35% das vendas, o modelo propõe inverter a lógica tradicional de aquisição: em vez de o cliente buscar o produto em plataformas como Amazon, o produto “vai atrás” do cliente via storytelling, “novelinhas” e transmissões ao vivo, ativando o desejo por meio de conteúdo.
+
+A estratégia de conteúdo combina dois tipos de influenciadores: o especialista (com conhecimento técnico) e o consumidor real (que confere autenticidade e validação). As transmissões seriam ao vivo via Instagram, YouTube e plataformas afins, segmentadas para o público do shopping e seu entorno, aproveitando estudos de viabilidade e posicionamento já existentes na administração dos shoppings (perfil socioeconômico, tráfego, lojas âncora). A ideia central é transformar o consumidor em um “agregador de venda” que, ao compartilhar espontaneamente sua experiência, aumenta credibilidade e viabiliza conversões tanto no ambiente físico quanto no digital, com potencial de integração com veículos regionais (ex.: Metrópolis) para ampliar alcance via streaming.
+
+
+Estratégia de Operação e Monetização
+O público-alvo prioritário declarado para o piloto são mulheres de 25 a 45 anos e famílias, tipicamente frequentadoras de shoppings. A infraestrutura ideal do estúdio é compacta (aprox. 30 m²), localizada próxima a uma loja âncora para maximizar fluxo. O funcionamento diário previsto é de 4 a 8 horas, preferencialmente no período de maior movimento (tarde/noite, até 22h), podendo alternar entre shoppings conforme necessidade, embora o ideal seja operação fixa interna ao shopping.
+
+O fluxo do cliente é estruturado: a pessoa realiza a compra na loja parceira, recebe um cupom de desconto, dirige-se ao estúdio para gravar um depoimento de 1 a 3 minutos, e recebe no WhatsApp o vídeo editado para compartilhamento imediato, incluindo facilidades para publicar no Instagram. Para fortalecer recorrência e incentivar tráfego adicional, sugere-se que o desconto seja aplicado em uma segunda compra ou em outra loja do shopping, ao invés de apenas no produto já adquirido, alinhando interesse das lojas e do shopping.
+
+Os recursos técnicos incluem câmeras 4K, microfones profissionais, iluminação, internet dedicada e sistema online de operação. A edição deve ser rápida e, preferencialmente, automatizada com IA (ex.: cortes, vinhetas, legendas), minimizando fricção e tempo de ciclo. Operacionalmente, a equipe mínima por estúdio inclui um produtor e um operador de câmera, com possibilidade de terceirização. Há necessidade de cuidados acústicos e montagem de um estúdio efetivo (fundo, tratamento de som), para garantir qualidade audiovisual.
+
+O investimento inicial estimado para implementar um estúdio é de R$ 280.000,00; em outro momento, o apresentador menciona que um estúdio “robusto” poderia exigir R$ 700.000,00, e que uma versão mínima viável “apertada” poderia ser feita com R$ 100.000,00, ressaltando que tecnologia e software são o principal peso orçamentário. Os custos operacionais mensais projetados variam entre R$ 28.000,00 e R$ 45.000,00, incluindo aluguel do ponto, equipe e manutenção (com uma observação de que valores de equipe podem estar altos por referência a padrões de TikTok).
+
+Monetização: taxas recorrentes das lojas parceiras (entre R$ 800,00 e R$ 1.500,00 por mês por loja), comissão sobre vendas geradas via o canal/plataforma, e patrocínios/publicidade de conteúdo. Também prevê sorteios semanais com lojistas (ex.: prêmios como camisa da seleção ao vídeo mais assistido) para promover engajamento. Entre o 4º e o 6º mês, a meta conservadora é atingir cerca de 46 acompanhamentos de lives por mês, com base de 8 a 10 lojas fixas parceiras (estimando R$ 8.000,00 a R$ 15.000,00/mês em taxas, além de comissões). Há necessidade de estruturar parceria com a administração do shopping para viabilizar espaço, fluxo e integração, e de definir juridicamente a participação de menores (autorização legal obrigatória).
+
+
+Análise de Desafios e Vantagens Competitivas
+Entre os desafios mais críticos estão a adesão inicial das lojas, o engajamento de consumidores para entrar no estúdio, e a qualidade dos depoimentos gerados. Para contornar a resistência das lojas, sugere-se oferecer 30 dias de uso gratuito com garantia de entrega de conteúdo, cobrando comissão sobre vendas geradas. A captura de fluxo exige coordenação com o app do shopping para cupons automáticos, treinamento de vendedores para convidar clientes, e uso de “sinais de atração” visuais (aglomeração, dinâmica no estúdio) para chamar atenção dos transeuntes. A qualidade do conteúdo requer um condutor que direcione a fala, acelere e estruture depoimentos para evitar material “fraco”; edição rápida e criteriosa na hora também é mencionada como necessária.
+
+As vantagens competitivas destacam-se na hiperlocalização e autenticidade: depoimentos de consumidores reais da região criam identificação cultural e confiança, diferenciando-se de plataformas globais (ex.: Kawaii, TikTok) onde há saturação e baixa personalização. O modelo também evita problemas de adequação cultural e técnica comuns em compras internacionais (ex.: tamanhos e cortes de roupas diferentes). O cerne é a inversão da busca: conteúdo e storytelling fazem o produto alcançar o cliente, potencializando uma experiência única que aumenta o tráfego físico e digital do shopping.
+
+Há riscos: saturação de experiências em shoppings exige proposta com propósito claro para não soar “mais do mesmo”; competição com plataformas generalistas demanda foco no contexto regional e experiência superior. A complexidade operacional (integração de tecnologia, estúdio, captação e edição automática) demanda equipe e processos diligentes para assegurar consistência e escala.
+
+
+Estrutura Societária e Proposta aos Investidores
+A proposta societária reserva 75% das cotas ao sócio principal e 25% aos “servidores ângeles” (sócios/equipe), com integralização por vesting ao longo de 12 meses, vinculando avanço do projeto à consolidação das cotas, protegendo ambos os lados. O apresentador não atuará como operador/CEO; será necessário que novos sócios assumam gestão, negociações, orçamentos e operação diária.
+
+A estratégia de escala prevê, após atingir 5 a 6 estúdios, abertura de capital para investidores (rodada seed/VC), com diluição das cotas para acomodar novos aportes e aumento de valuation. Em rodadas subsequentes (venture capital), haverá nova diluição com entrada de um investidor maior (30%-40% possíveis), e saída parcial do principal com valorização relevante. A narrativa financeira inclui cenários conservadores pós-lançamento (3 meses) e intenção de expansão para Goiás (10 a 12 estúdios) se metas forem alcançadas, embora números exatos de faturamento em escala apareçam fragmentados no discurso.
+
+Quanto ao CAPEX, há três balizas citadas: R$ 280.000,00 (implantação estimada), R$ 700.000,00 (estúdio “legal” com estrutura robusta) e R$ 100.000,00 (versão mínima viável se “apertar bem”). O negócio é caracterizado como uma empresa de tecnologia (não apenas estúdio), demandando software, IA e automação (edição instantânea, distribuição), além de integração com sistemas de lojas (cupons, registros) e possíveis acordos de afiliados.
+
+
+Filosofia do Negócio e Reflexões Finais
+O projeto coloca a experiência e o pertencimento no centro, não a transação. O estúdio deve ser acolhedor, prazeroso e seguro — evitando abordagens agressivas e desatenção que geram ansiedade no cliente — para que o consumidor se sinta valorizado e empoderado ao compartilhar sua compra. A decisão de participação e investimento é convidada a ser tanto racional quanto emocional: “Conhecer sem sentir não é saber. Sentir sem conhecer também não é saber.” O apresentador destaca os altos riscos de startups (menciona 95% de fracasso e percentuais simbólicos como “99,89%”), mas reforça que quando dá certo “é uma alegria” e que o objetivo é “fazer algo” com graça e empatia.
+
+A construção de comunidade é essencial para evitar uma cultura “mesquinha e dinheirista” que atrai comportamentos oportunistas. Elementos lúdicos (mascotes à moda japonesa/chinesa), sorteios e newsletters podem reforçar o pertencimento. Trabalhar com familiares e amigos é encorajado pela confiança inerente, embora reconheça dificuldades de gestão; quando há liga, “é muito bacana”. O apelo final é para que os interessados “durmam com a ideia”, validem sentimento e razão, e, se ambos disserem “sim”, avancem com consciência dos riscos e propósito.
+
+
+Itens de Ação
+@Apresentador
+ Convidar Lucas para integrar a equipe do projeto - [TBD]
+ Convidar Vinícius para integrar a equipe do projeto - [TBD]
+ Consultar a administração de shoppings selecionados sobre viabilidade de espaço, posicionamento próximo a âncoras e integração com app/cupom - [TBD]
+ Levantar e consolidar requisitos legais para participação de menores (modelos de autorização, termos de imagem) - [TBD]
+ Definir proposta de 30 dias grátis e termos de comissão sobre vendas com lojas-piloto - [TBD]
+ Especificar e cotar equipamentos (câmeras 4K, microfones, iluminação, internet dedicada) e soluções de IA para edição automática - [TBD]
+ Estruturar fluxo operacional: roteiro de depoimentos, condução por profissional, tempo de edição e entrega via WhatsApp/Instagram - [TBD]
+ Preparar materiais de treinamento para vendedores das lojas parceiras chamarem clientes ao estúdio - [TBD]
+ Desenhar política de cupons (aplicação em segunda compra/outra loja) e método de registro/validação em integração com lojas - [TBD]
+ Estabelecer parceria com veículo regional (ex.: Metrópolis) para transmissão ao vivo do streaming - [TBD]
+ Definir plano financeiro com cenários conservadores para 3 meses pós-lançamento e metas de 4º–6º mês (46 lives/mês; 8–10 lojas fixas) - [TBD]
+ Selecionar e contratar equipe mínima (produtor e operador de câmera) com possibilidade de terceirização - [TBD]
+ Elaborar modelo societário com vesting de 12 meses e documentos de onboarding para “servidores ângeles” - [TBD]
+ Planejar expansão (ex.: Goiás) condicionada ao cumprimento das metas do piloto - [TBD]

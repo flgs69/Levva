@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiveHub — Loja com LiveHub vs. Loja Tradicional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --near-black:#1c1c1e;
+    --white:#ffffff;
+    --blue-450:#5b76fe;
+    --actionable-pressed:#2a41b6;
+    --success:#00b473;
+    --slate:#555a6a;
+    --placeholder:#a5a8b5;
+    --border:#c7cad5;
+    --ring:rgb(224,226,232);
+    --coral-light:#ffc6c6;
+    --coral-dark:#600000;
+    --rose-light:#ffd8f4;
+    --teal-light:#c3faf5;
+    --teal-dark:#187574;
+    --orange-light:#ffe6cd;
+    --yellow-dark:#746019;
+    --pink:#fde0f0;
+    --red-light:#fbd4d4;
+
+    --font-display:'Manrope', 'Roobert PRO Medium', system-ui, sans-serif;
+    --font-body:'Noto Sans', system-ui, sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:var(--white);
+    color:var(--near-black);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.5;
+    letter-spacing:-0.16px;
+  }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- Header / hero ---------- */
+  header{
+    padding:64px 0 56px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:10.5px;
+    letter-spacing:0.6px;
+    text-transform:uppercase;
+    color:var(--slate);
+    background:var(--teal-light);
+    border-radius:50px;
+    padding:6px 14px;
+    margin-bottom:24px;
+  }
+
+  h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:48px;
+    line-height:1.15;
+    letter-spacing:-1.44px;
+    max-width:820px;
+  }
+
+  h1 span{ color:var(--blue-450); }
+
+  .subhead{
+    font-family:var(--font-body);
+    font-size:22px;
+    font-weight:400;
+    line-height:1.35;
+    letter-spacing:-0.44px;
+    color:var(--slate);
+    max-width:640px;
+    margin-top:20px;
+  }
+
+  .warning-card{
+    margin-top:32px;
+    background:var(--orange-light);
+    border-radius:16px;
+    padding:20px 24px;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .warning-card .icon{ font-size:20px; line-height:1; }
+  .warning-card p{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--near-black);
+  }
+  .warning-card strong{ font-weight:700; }
+
+  /* ---------- Sections ---------- */
+  section{ padding:48px 0; }
+  section + section{ border-top:1px solid var(--ring); }
+
+  .section-label{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:-0.36px;
+    text-transform:uppercase;
+    color:var(--blue-450);
+    margin-bottom:12px;
+  }
+
+  h2{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:32px;
+    line-height:1.15;
+    letter-spacing:-0.72px;
+    margin-bottom:8px;
+  }
+
+  .section-desc{
+    color:var(--slate);
+    font-size:16px;
+    max-width:640px;
+    margin-bottom:32px;
+  }
+
+  /* ---------- Comparison cards ---------- */
+  .compare-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+
+  .compare-card{
+    border-radius:20px;
+    padding:28px;
+    border:1px solid var(--ring);
+  }
+
+  .compare-card.trad{ background:#f7f7f8; }
+  .compare-card.livehub{ background:var(--teal-light); }
+
+  .compare-card .tag{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:18px;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .compare-list{ list-style:none; }
+  .compare-list li{
+    display:flex;
+    gap:12px;
+    padding:14px 0;
+    border-top:1px solid rgba(28,28,30,0.08);
+    font-size:14px;
+    line-height:1.5;
+  }
+  .compare-list li:first-child{ border-top:none; }
+  .compare-list .label{
+    font-weight:700;
+    font-family:var(--font-display);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:-0.2px;
+    color:var(--slate);
+    min-width:110px;
+    flex-shrink:0;
+  }
+  .compare-card.livehub .label{ color:var(--teal-dark); }
+
+  /* ---------- Cost table ---------- */
+  .table-card{
+    border:1px solid var(--ring);
+    border-radius:20px;
+    overflow:hidden;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+
+  thead th{
+    text-align:left;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:-0.2px;
+    color:var(--slate);
+    background:#f7f7f8;
+    padding:16px 20px;
+  }
+
+  tbody td{
+    padding:16px 20px;
+    border-top:1px solid var(--ring);
+    vertical-align:top;
+  }
+
+  tbody tr.subtotal td{
+    background:var(--coral-light);
+    font-family:var(--font-display);
+    font-weight:700;
+  }
+
+  .badge{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    padding:2px 8px;
+    border-radius:50px;
+    background:var(--orange-light);
+    color:var(--yellow-dark);
+    margin-left:6px;
+  }
+
+  .cost-range{ font-family:var(--font-display); font-weight:700; }
+
+  /* ---------- Multiple callout ---------- */
+  .multiple-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:16px;
+    margin-top:24px;
+  }
+  .multiple-card{
+    border-radius:16px;
+    padding:24px;
+    text-align:center;
+  }
+  .multiple-card.a{ background:#f7f7f8; }
+  .multiple-card.b{ background:var(--teal-light); }
+  .multiple-card.c{ background:var(--rose-light); }
+  .multiple-card .num{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:32px;
+    letter-spacing:-1px;
+    color:var(--near-black);
+  }
+  .multiple-card .desc{
+    font-size:13px;
+    color:var(--slate);
+    margin-top:6px;
+  }
+
+  /* ---------- Tip / closing ---------- */
+  .tip-card{
+    background:var(--near-black);
+    color:var(--white);
+    border-radius:24px;
+    padding:40px;
+    margin-top:8px;
+  }
+  .tip-card .section-label{ color:var(--teal-light); }
+  .tip-card h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:24px;
+    letter-spacing:-0.72px;
+    line-height:1.25;
+    margin-bottom:16px;
+  }
+  .tip-card p{
+    color:#c7cad5;
+    font-size:16px;
+    line-height:1.6;
+    max-width:680px;
+  }
+  .tip-card p + p{ margin-top:12px; }
+  .tip-card strong{ color:var(--white); }
+
+  footer{
+    padding:40px 0 64px;
+    color:var(--placeholder);
+    font-size:12px;
+    line-height:1.7;
+  }
+
+  @media (max-width:768px){
+    h1{ font-size:34px; letter-spacing:-1px; }
+    h2{ font-size:26px; }
+    .compare-grid{ grid-template-columns:1fr; }
+    .multiple-grid{ grid-template-columns:1fr; }
+    table, thead, tbody, th, td, tr{ display:block; }
+    thead{ display:none; }
+    tbody td{ display:flex; gap:8px; }
+    tbody td::before{
+      content: attr(data-label);
+      font-family:var(--font-display);
+      font-weight:700;
+      font-size:11px;
+      text-transform:uppercase;
+      color:var(--slate);
+      min-width:110px;
+      flex-shrink:0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">💡 LiveHub · Pitch de Venda</span>
+    <h1>Sua loja gera conteúdo <span>todo mês</span> — sem contratar ninguém a mais.</h1>
+    <p class="subhead">Comparativo entre operar do jeito tradicional e operar com o estúdio LiveHub dentro do shopping, mais o custo real de tentar replicar o mesmo resultado sozinho.</p>
+
+    <div class="warning-card">
+      <span class="icon">⚠️</span>
+      <p><strong>Antes de usar isso com um cliente:</strong> os valores de pacotes/custos da LiveHub ainda não foram validados em operação real (estágio de discovery), e a tabela de "custo de fazer sozinho" é uma estimativa de mercado, não uma cotação fechada. Use como esqueleto de argumento, e confirme os números antes de prometer retorno.</p>
+    </div>
+  </header>
+
+  <section id="comparativo">
+    <span class="section-label">01 — Comparativo</span>
+    <h2>Loja tradicional × Loja com LiveHub</h2>
+    <p class="section-desc">O que muda no dia a dia da loja quando ela entra para o estúdio do shopping.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card trad">
+        <div class="tag">🏬 Loja tradicional</div>
+        <ul class="compare-list">
+          <li><span class="label">Conteúdo</span><span>Esporádico ou inexistente — depende do esforço da própria equipe</span></li>
+          <li><span class="label">Prova social</span><span>Reviews dispersos, sem padrão nem controle de qualidade</span></li>
+          <li><span class="label">Alcance</span><span>Limitado à base de seguidores e clientes já existentes</span></li>
+          <li><span class="label">Custo</span><span>Fragmentado — freelancers avulsos, ferramentas soltas, sem previsibilidade</span></li>
+          <li><span class="label">Dados</span><span>Pouco ou nenhum dado estruturado por vídeo/produto</span></li>
+          <li><span class="label">Indicação</span><span>Precisaria estruturar programa de afiliados do zero</span></li>
+          <li><span class="label">Efeito de rede</span><span>Nenhum — o esforço de uma loja não beneficia as outras</span></li>
+        </ul>
+      </div>
+
+      <div class="compare-card livehub">
+        <div class="tag">🎥 Loja com LiveHub</div>
+        <ul class="compare-list">
+          <li><span class="label">Conteúdo</span><span>20 a 60 depoimentos/mês + até 2 lives, conforme o pacote</span></li>
+          <li><span class="label">Prova social</span><span>Depoimentos reais, filmados profissionalmente, no contexto da compra</span></li>
+          <li><span class="label">Alcance</span><span>Ampliado pela audiência do estúdio, streaming e rede de creators afiliados</span></li>
+          <li><span class="label">Custo</span><span>Fixo e previsível: R$ 800 a R$ 1.800/mês, conforme pacote</span></li>
+          <li><span class="label">Dados</span><span>Dashboard com visualizações, cliques, cupons usados e vendas rastreadas</span></li>
+          <li><span class="label">Indicação</span><span>Estrutura pronta — "LiveHub Creators", 3 camadas de afiliados</span></li>
+          <li><span class="label">Efeito de rede</span><span>Mais lojas gravando = mais audiência = mais fluxo pro shopping todo</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="custo-sozinho">
+    <span class="section-label">02 — Custo de fazer sozinho</span>
+    <h2>Quanto custaria replicar isso por conta própria</h2>
+    <p class="section-desc">Estimativa de mercado <span class="badge">não validado</span> para montar uma operação equivalente ao pacote Padrão da LiveHub (40 depoimentos + 1 live de 30 min/mês) sem o estúdio.</p>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Para que serve</th>
+            <th>Custo estimado/mês</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Item">Videomaker freelancer</td>
+            <td data-label="Para que serve">Gravar os depoimentos em loja</td>
+            <td data-label="Custo" class="cost-range">R$ 2.500 – 4.000</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Editor de vídeo</td>
+            <td data-label="Para que serve">Cortar/editar 40 peças + 1 live/mês</td>
+            <td data-label="Custo" class="cost-range">R$ 1.500 – 2.500</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Social media / gestor de tráfego</td>
+            <td data-label="Para que serve">Publicar, distribuir, cuidar dos anúncios</td>
+            <td data-label="Custo" class="cost-range">R$ 1.500 – 3.000</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Mídia paga (Instagram/TikTok Ads)</td>
+            <td data-label="Para que serve">Tentar alcançar audiência equivalente ao fluxo do shopping — sem o efeito de rede, custo por resultado tende a ser maior</td>
+            <td data-label="Custo" class="cost-range">R$ 1.000 – 2.000</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Ferramenta de afiliados</td>
+            <td data-label="Para que serve">Programa de indicação próprio (Tapfiliate/Rewardful)</td>
+            <td data-label="Custo" class="cost-range">R$ 150 – 400</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Desconto/incentivo ao cliente</td>
+            <td data-label="Para que serve">Mesmo incentivo usado pela LiveHub</td>
+            <td data-label="Custo">Variável — já existiria de qualquer forma</td>
+          </tr>
+          <tr class="subtotal">
+            <td data-label="Item">Subtotal recorrente/mês</td>
+            <td data-label="Para que serve"></td>
+            <td data-label="Custo" class="cost-range">R$ 6.650 – 11.900</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Equipamento básico (setup único)</td>
+            <td data-label="Para que serve">Câmera, luz, microfone — qualidade mínima de gravação</td>
+            <td data-label="Custo" class="cost-range">R$ 3.000 – 8.000 (uma vez)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="multiple-grid">
+      <div class="multiple-card a">
+        <div class="num">R$ 1.300</div>
+        <div class="desc">Pacote LiveHub Padrão / mês</div>
+      </div>
+      <div class="multiple-card b">
+        <div class="num">R$ 6.650–11.900</div>
+        <div class="desc">Fazendo sozinho / mês</div>
+      </div>
+      <div class="multiple-card c">
+        <div class="num">~5x a 9x</div>
+        <div class="desc">Mais caro fazer por conta própria</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fechamento">
+    <div class="tip-card">
+      <span class="section-label">Como usar no pitch</span>
+      <h3>A mensagem não é "somos mais baratos que um freelancer".</h3>
+      <p>É <strong>"você não consegue comprar o efeito de rede sozinho"</strong>. Mesmo pagando R$ 6.650–11.900/mês, a loja isolada não replica o fluxo adicional que vem de <em>outras</em> lojas do shopping também gravando, nem o alcance do streaming do estúdio.</p>
+      <p>Não vender vídeo — vender vendas. Não vender tecnologia — vender resultado.</p>
+    </div>
+  </section>
+
+  <footer>
+    Documento de apoio ao pitch comercial — LiveHub, estágio de discovery. Valores sujeitos a validação com clientes e fornecedores reais.
+  </footer>
+</div>
+
+</body>
+</html>

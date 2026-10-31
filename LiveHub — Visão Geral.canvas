@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"id":"2935c7e9a1d4f6b8","type":"group","x":-560,"y":-360,"width":900,"height":940,"color":"6","label":"🏗️ Pilares do Projeto"},
+		{"id":"90acd4f6b8e1a3c5","type":"group","x":440,"y":-360,"width":620,"height":940,"color":"1","label":"🎯 Validação & Discovery"},
+		{"id":"b2e4d6f8a0c13579","type":"group","x":-1900,"y":-340,"width":520,"height":860,"color":"4","label":"📥 Fontes & Insumos"},
+		{"id":"a1f3c5e7b9d10246","type":"text","text":"# 🎥 LiveHub Shopping — Visão Geral\n\n**Estúdio de live commerce em shoppings** que transforma compradores reais em mídia: o cliente ganha desconto para gravar um depoimento sobre a compra → conteúdo autêntico gera tráfego e vendas.\n\n> ⚠️ Estágio: **DISCOVERY** — números e fluxos ainda **não validados**. Prioridade: testar a hipótese central antes de investir.","x":-1900,"y":-640,"width":2960,"height":200,"color":"6"},
+		{"id":"c3f5a7b9d1e24680","type":"file","file":"09 - Fontes/Resumo da Proposta.md","x":-1860,"y":-270,"width":440,"height":200},
+		{"id":"d4a6b8c0e2f35791","type":"file","file":"09 - Fontes/Análise Crítica.md","x":-1860,"y":-40,"width":440,"height":240},
+		{"id":"f6c8d0e2a4b57913","type":"file","file":"_Home.md","x":-1180,"y":-340,"width":520,"height":250,"color":"6"},
+		{"id":"0713a5c7e9b2d4f6","type":"file","file":"01 - Conceito e Visão/Especificações do Projeto.md","x":-1180,"y":-30,"width":520,"height":320,"color":"6"},
+		{"id":"1824b6d8f0c3e5a7","type":"text","text":"## 🎯 A pergunta que decide tudo\n\n**As pessoas realmente param espontaneamente para gravar em troca do incentivo?**\n\n- ✅ **Sim** → vira problema de operação e escala.\n- ❌ **Não** → toda a arquitetura precisa ser repensada.","x":-1180,"y":350,"width":520,"height":230,"color":"1"},
+		{"id":"3a46d8f0b2e5a7c9","type":"file","file":"01 - Conceito e Visão/Conceito e Proposta de Valor.md","x":-520,"y":-280,"width":400,"height":200},
+		{"id":"4b57e9a1c3f6b8d0","type":"file","file":"03 - Operação/Plano Operacional.md","x":-520,"y":-40,"width":400,"height":200},
+		{"id":"5c68f0b2d4a7c9e1","type":"file","file":"05 - Mercado/Análise de Mercado e Concorrência.md","x":-520,"y":200,"width":400,"height":200},
+		{"id":"6d79a1c3e5b8d0f2","type":"file","file":"02 - Modelo de Negócio/Modelo de Negócio e Monetização.md","x":-80,"y":-280,"width":400,"height":200},
+		{"id":"7e8ab2d4f6c9e1a3","type":"file","file":"04 - Financeiro/Investimento e Projeções Financeiras.md","x":-80,"y":-40,"width":400,"height":200},
+		{"id":"8f9bc3e5a7d0f2b4","type":"file","file":"07 - Societário e Investimento/Estrutura Societária e Investimento.md","x":-80,"y":200,"width":400,"height":200},
+		{"id":"a1bde5a7c9f2b4d6","type":"file","file":"06 - Riscos e Validação/Hipóteses e Validação.md","x":480,"y":-280,"width":540,"height":240,"color":"1"},
+		{"id":"b2cef6b8d0a3c5e7","type":"file","file":"08 - Discovery/Itens de Ação.md","x":480,"y":0,"width":540,"height":180},
+		{"id":"c3d0a7c9e1b4d6f8","type":"file","file":"08 - Discovery/Perguntas em Aberto.md","x":480,"y":220,"width":540,"height":180},
+		{"id":"d4e1b8d0f2c5e7a9","type":"text","text":"## ✅ Próximo passo\n\n**MVP enxuto:** 1 estúdio · 1 shopping · 5 lojas · meta 200 vídeos/mês. Ordem: **validar → automatizar → escalar.**","x":480,"y":440,"width":540,"height":120,"color":"4"},
+		{"id":"e5b7c9d1f3a46802","type":"text","text":"### 🗂️ Arquivos brutos\n\n- `PLANO DE NEGÓCIOS - LIVEHUB.docx`\n- `...Proposta...Resumo.txt`\n- `...Valor Econômico.pdf` (mercado)\n\nOriginais em `09 - Fontes/`.\nÍndice: [[_Arquivos Brutos]]","x":-1860,"y":225,"width":440,"height":250,"color":"4"}
+	],
+	"edges":[
+		{"id":"e001a1b2c3d4e5f6","fromNode":"c3f5a7b9d1e24680","fromSide":"right","toNode":"0713a5c7e9b2d4f6","toSide":"left","label":"insumo"},
+		{"id":"e002b2c3d4e5f6a7","fromNode":"d4a6b8c0e2f35791","fromSide":"right","toNode":"0713a5c7e9b2d4f6","toSide":"left","label":"insumo"},
+		{"id":"e003c3d4e5f6a7b8","fromNode":"f6c8d0e2a4b57913","fromSide":"bottom","toNode":"0713a5c7e9b2d4f6","toSide":"top"},
+		{"id":"e004d4e5f6a7b8c9","fromNode":"0713a5c7e9b2d4f6","fromSide":"right","toNode":"2935c7e9a1d4f6b8","toSide":"left","label":"detalha"},
+		{"id":"e005e5f6a7b8c9d0","fromNode":"0713a5c7e9b2d4f6","fromSide":"bottom","toNode":"1824b6d8f0c3e5a7","toSide":"top"},
+		{"id":"e006f6a7b8c9d0e1","fromNode":"d4a6b8c0e2f35791","fromSide":"bottom","toNode":"1824b6d8f0c3e5a7","toSide":"left","color":"1","label":"origem da hipótese"},
+		{"id":"e007a7b8c9d0e1f2","fromNode":"1824b6d8f0c3e5a7","fromSide":"right","toNode":"a1bde5a7c9f2b4d6","toSide":"left","color":"1","label":"validar"},
+		{"id":"e008b8c9d0e1f2a3","fromNode":"a1bde5a7c9f2b4d6","fromSide":"bottom","toNode":"b2cef6b8d0a3c5e7","toSide":"top","label":"gera"},
+		{"id":"e009c9d0e1f2a3b4","fromNode":"b2cef6b8d0a3c5e7","fromSide":"bottom","toNode":"d4e1b8d0f2c5e7a9","toSide":"top"},
+		{"id":"e010d0e1f2a3b4c5","fromNode":"2935c7e9a1d4f6b8","fromSide":"right","toNode":"90acd4f6b8e1a3c5","toSide":"left","label":"alimenta decisões"}
+	]
+}

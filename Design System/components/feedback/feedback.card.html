@@ -1,0 +1,31 @@
+<!-- @dsCard group="Componentes" viewport="700x280" name="Badges, Tags, Toast, Tooltip" subtitle="Status, filters, notifications" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="padding:20px;background:var(--surface-page);font-family:var(--font-body)"></div>
+<script type="text/babel">
+const { Badge, Tag, Toast, Tooltip, IconButton } = window.LiveHubShoppingDesignSystem_8f0aee;
+function Demo(){
+  const [sel,setSel]=React.useState('electronics');
+  return <div style={{display:'flex',flexDirection:'column',gap:16}}>
+    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+      <Badge tone="coral">Destaque</Badge>
+      <Badge tone="success">Ativa</Badge>
+      <Badge tone="warning">Em análise</Badge>
+      <Badge tone="danger">Rejeitado</Badge>
+      <Badge tone="info">Novo</Badge>
+      <Badge tone="neutral">Rascunho</Badge>
+    </div>
+    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+      <Tag selected={sel==='electronics'} onClick={()=>setSel('electronics')}>Eletrônicos</Tag>
+      <Tag selected={sel==='beauty'} onClick={()=>setSel('beauty')}>Beleza</Tag>
+      <Tag onRemove={()=>{}}>Oferta do fim de semana ×</Tag>
+    </div>
+    <Toast tone="success" title="Recompensa enviada" description="Crédito de R$ 5 liberado para o cliente."/>
+    <div><Tooltip label="Revisar este envio"><span style={{textDecoration:'underline dotted',cursor:'default'}}>Passe o mouse</span></Tooltip></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>

@@ -1,0 +1,53 @@
+<!-- @dsCard group="Marca" viewport="700x460" name="Motion do logo" subtitle="4 tratamentos simples para intros/splash, todos em CSS" -->
+<link rel="stylesheet" href="../styles.css">
+<style>
+@keyframes moni-mark{0%,8%{opacity:0;transform:scale(0.6)}22%,78%{opacity:1;transform:scale(1)}92%,100%{opacity:0;transform:scale(0.6)}}
+@keyframes moni-word{0%,22%{opacity:0;transform:translateX(-8px)}36%,78%{opacity:1;transform:translateX(0)}92%,100%{opacity:0;transform:translateX(-8px)}}
+.moni-mark{animation:moni-mark 3s ease-in-out infinite}
+.moni-word{animation:moni-word 3s ease-in-out infinite}
+
+@keyframes moni-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes moni-arc-fade{0%,10%{opacity:0}30%,100%{opacity:1}}
+@keyframes moni-word-fade{0%,30%{opacity:0}50%,100%{opacity:1}}
+.moni-pulse{animation:moni-pulse 1.6s ease-in-out infinite}
+.moni-arc{animation:moni-arc-fade 3s ease-in-out infinite}
+.moni-word-fade{animation:moni-word-fade 3s ease-in-out infinite}
+
+@keyframes moni-wipe{0%,6%{clip-path:inset(0 100% 0 0)}45%,80%{clip-path:inset(0 0 0 0)}96%,100%{clip-path:inset(0 100% 0 0)}}
+.moni-wipe{animation:moni-wipe 3s ease-in-out infinite}
+
+@keyframes moni-rotate{0%,8%{opacity:0;transform:rotate(-18deg) scale(0.7)}25%,78%{opacity:1;transform:rotate(0) scale(1)}92%,100%{opacity:0;transform:rotate(-18deg) scale(0.7)}}
+@keyframes moni-letter{0%,100%{opacity:0.15}}
+.moni-rotate{animation:moni-rotate 3s ease-in-out infinite}
+.moni-letter{display:inline-block;animation:moni-letter-in 3s ease-in-out infinite}
+@keyframes moni-letter-in{0%,5%{opacity:0.15}15%,85%{opacity:1}95%,100%{opacity:0.15}}
+</style>
+
+<div style="display:flex;flex-direction:column;gap:14px;padding:16px;background:var(--surface-page)">
+
+<div style="height:110px;background:var(--ink-900);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:14px">
+<img class="moni-mark" src="../assets/brand/logomark-paper.svg" style="width:40px;height:40px">
+<span class="moni-word" style="font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--paper-0);letter-spacing:-0.02em">MONI</span>
+</div>
+
+<div style="height:110px;background:var(--ink-900);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:14px">
+<span class="moni-pulse" style="display:inline-flex;width:16px;height:16px;border-radius:50%;background:var(--brand-coral)"></span>
+<img class="moni-arc" src="../assets/brand/logomark-paper.svg" style="width:40px;height:40px">
+<span class="moni-word-fade" style="font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--paper-0);letter-spacing:-0.02em">MONI</span>
+</div>
+
+<div style="height:110px;background:var(--brand-coral);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:14px;overflow:hidden">
+<div class="moni-wipe" style="display:flex;align-items:center;gap:14px">
+<img src="../assets/brand/logomark-paper.svg" style="width:40px;height:40px">
+<span style="font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--paper-0);letter-spacing:-0.02em;white-space:nowrap">MONI</span>
+</div>
+</div>
+
+<div style="height:110px;background:var(--surface-card);border:2px solid var(--border-strong);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:14px">
+<img class="moni-rotate" src="../assets/brand/logomark-coral.svg" style="width:40px;height:40px">
+<span style="font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--ink-900);letter-spacing:-0.02em">
+<span class="moni-letter" style="animation-delay:0.1s">M</span><span class="moni-letter" style="animation-delay:0.25s">O</span><span class="moni-letter" style="animation-delay:0.4s">N</span><span class="moni-letter" style="animation-delay:0.55s">I</span>
+</span>
+</div>
+
+</div>

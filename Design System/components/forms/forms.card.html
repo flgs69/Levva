@@ -1,0 +1,29 @@
+<!-- @dsCard group="Componentes" viewport="700x300" name="Inputs, Select, Checkbox, Radio, Switch" subtitle="Campos de formulário com borda de tinta de 2px" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="padding:20px;background:var(--surface-page);font-family:var(--font-body)"></div>
+<script type="text/babel">
+const { Input, Select, Checkbox, Radio, Switch } = window.LiveHubShoppingDesignSystem_8f0aee;
+function Demo(){
+  const [c,setC]=React.useState(true);
+  const [r,setR]=React.useState('mall');
+  const [s,setS]=React.useState(true);
+  return <div style={{display:'flex',flexDirection:'column',gap:16,maxWidth:420}}>
+    <div style={{display:'flex',gap:16}}>
+      <Input label="Nome da loja" placeholder="Shopping Riverside, Piso 2"/>
+      <Input label="Valor da recompensa" placeholder="R$ 5,00" error="Deve ser pelo menos R$ 1"/>
+    </div>
+    <Select label="Shopping" options={[{label:'Shopping Riverside',value:'riverside'},{label:'Union Square',value:'union'}]}/>
+    <div style={{display:'flex',gap:20,alignItems:'center',flexWrap:'wrap'}}>
+      <Checkbox label="Avisar ao bater a meta" checked={c} onChange={()=>setC(!c)}/>
+      <Radio name="loc" label="Shopping" checked={r==='mall'} onChange={()=>setR('mall')}/>
+      <Radio name="loc" label="Loja" checked={r==='store'} onChange={()=>setR('store')}/>
+      <Switch label="Campanha ativa" checked={s} onChange={()=>setS(!s)}/>
+    </div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>

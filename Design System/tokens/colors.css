@@ -1,0 +1,17 @@
+:root{
+--brand-coral:#ff4433;--brand-coral-dark:#e33322;--brand-coral-light:#ffe4df;
+--ink-900:#1a1210;--ink-700:#3a2f2c;--ink-500:#6b5f5b;--ink-300:#a89c97;
+--paper-0:#fffaf5;--paper-50:#fbf3ea;--paper-100:#f3e8db;--paper-200:#e8dbc9;
+--line-100:#e8dbc9;--line-900:#1a1210;
+--accent-teal:#0f6e5c;--accent-teal-light:#dcefe9;
+--accent-gold:#f2b705;
+--success-600:#1f8a4c;--success-100:#e0f5e6;
+--warning-600:#c97a12;--warning-100:#fbead0;
+--danger-600:#c22a3e;--danger-100:#fbe1e2;
+--info-600:#2461c9;--info-100:#e2ecfb;
+--text-primary:var(--ink-900);--text-secondary:var(--ink-500);--text-inverse:var(--paper-0);
+--surface-page:var(--paper-50);--surface-card:var(--paper-0);--surface-sunken:var(--paper-100);
+--surface-inverse:var(--ink-900);
+--border-default:var(--line-100);--border-strong:var(--line-900);
+--focus-ring:var(--brand-coral);
+}

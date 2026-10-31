@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Manual de marca" description="Guia de referência rápida da identidade MONI, paginado, com manifesto, imagens e exportação em PDF" -->
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script><script src="./doc-page.js"></script><style>doc-page:not(:defined){visibility:hidden}
+.mm-page{height:100%;box-sizing:border-box;padding:0.7in;display:flex;flex-direction:column;font-family:var(--font-body)}
+.mm-kicker{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--brand-coral);margin:0 0 6px}
+.mm-h2{font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--ink-900);margin:0 0 16px}
+.mm-h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--ink-900);margin:18px 0 8px}
+.mm-p{font-size:13.5px;line-height:1.65;color:var(--ink-700);margin:0 0 10px;max-width:560px}
+.mm-row{display:flex;gap:14px;margin:14px 0}
+.mm-swatch{flex:1;height:210px;border-radius:10px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.mm-code{font-family:var(--font-mono);font-size:10px;line-height:1.6}
+.mm-dont{flex:1;border:2px dashed var(--danger-600);border-radius:12px;padding:20px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;min-height:200px}
+.mm-dont-label{font-size:11px;color:var(--danger-600);font-weight:700}
+.mm-footer{position:fixed;bottom:0.35in;left:0.7in;right:0.7in;font-size:9px;color:var(--ink-300);display:flex;justify-content:space-between}
+.mm-strip{height:90px;border-radius:10px;background-size:70px;margin-top:20px}
+</style></helmet>
+<doc-page>
+
+<section class="page" id="p-capa">
+<div style="position:relative;height:100%;box-sizing:border-box">
+<image-slot id="cover-bg" shape="rect" placeholder="Foto: loja ou shopping" src="../../assets/brand/photo-shopper-selfie-booth.png" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,18,16,0.35),rgba(26,18,16,0.8));pointer-events:none"></div>
+<div style="position:relative;height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;padding:0.55in;pointer-events:none">
+<div style="display:flex;justify-content:space-between;align-items:flex-start"><img src="../../assets/brand/logomark-paper.svg" style="width:36px;height:36px"><div style="font-size:11px;color:var(--paper-100);letter-spacing:0.1em">2026</div></div>
+<div>
+<div style="font-family:var(--font-display);font-weight:800;font-size:52px;color:var(--paper-0);letter-spacing:-0.02em">MONI</div>
+<div style="font-size:13px;color:var(--paper-100);text-transform:uppercase;letter-spacing:0.12em;margin-top:8px">Identidade Visual, Guia de Referência Rápida</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page" id="p-manifesto">
+<div class="mm-page" style="background:var(--ink-900);color:var(--paper-0);justify-content:center;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background-image:url(../../assets/brand/pattern-organic-dark.svg);background-size:220px;opacity:0.3"></div>
+<div style="position:relative">
+<div class="mm-kicker">01, Manifesto</div>
+<p style="font-family:var(--font-display);font-weight:600;font-size:34px;line-height:1.35;margin:0 0 28px;max-width:520px">Todo mundo compra. Poucos contam pra alguém.</p>
+<p style="font-size:16px;line-height:1.85;color:var(--paper-100);margin:0 0 18px;max-width:520px">Um vídeo de 30 segundos de quem realmente comprou vale mais do que qualquer anúncio, porque quem fala ali é cliente, não vendedor.</p>
+<p style="font-size:16px;line-height:1.85;color:var(--paper-100);margin:0 0 18px;max-width:520px">A MONI existe pra transformar isso em negócio. Sem atores, sem roteiro, sem post patrocinado.</p>
+<p style="font-size:16px;line-height:1.85;color:var(--paper-100);margin:0 0 18px;max-width:520px">O lojista ganha alcance de verdade. O shopping ganha gente circulando. E quem grava sai com dinheiro na conta, não só com sacola na mão.</p>
+<p style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:12px 0 0;max-width:520px">Não vendemos anúncio. Vendemos gente contando pra gente o que vale a pena comprar.</p>
+</div>
+</div>
+</section>
+
+<section class="page" id="p-cores">
+<div class="mm-page">
+<div class="mm-kicker">02, Cores</div>
+<h2 class="mm-h2">Paleta de cores</h2>
+<h3 class="mm-h3">Paleta primária</h3>
+<p class="mm-p">Minimalista, usada em toda comunicação: coral para ação, tinta para texto, papel para superfície.</p>
+<div class="mm-row">
+<div class="mm-swatch" style="background:#FF4433;color:#fff"><div class="mm-code">CORAL<br/>RGB 255 68 51<br/>HEX #FF4433<br/>CMYK 0 73 80 0</div></div>
+<div class="mm-swatch" style="background:#1A1210;color:#fff"><div class="mm-code">INK-900<br/>RGB 26 18 16<br/>HEX #1A1210<br/>CMYK 0 31 38 90</div></div>
+<div class="mm-swatch" style="background:#FBF3EA;border:1px solid #e8dbc9;color:#1A1210"><div class="mm-code">PAPER-50<br/>RGB 251 243 234<br/>HEX #FBF3EA<br/>CMYK 0 3 7 2</div></div>
+</div>
+<h3 class="mm-h3">Paleta secundária</h3>
+<p class="mm-p">Uso esporádico em gráficos, dados e acentos. Nunca em CTAs principais.</p>
+<div class="mm-row">
+<div class="mm-swatch" style="background:#0F6E5C;color:#fff"><div class="mm-code">TEAL<br/>RGB 15 110 92<br/>HEX #0F6E5C<br/>CMYK 86 0 16 57</div></div>
+<div class="mm-swatch" style="background:#F2B705;color:#1A1210"><div class="mm-code">GOLD<br/>RGB 242 183 5<br/>HEX #F2B705<br/>CMYK 0 24 98 5</div></div>
+<div class="mm-swatch" style="background:#2461C9;color:#fff"><div class="mm-code">INFO<br/>RGB 36 97 201<br/>HEX #2461C9<br/>CMYK 82 52 0 21</div></div>
+</div>
+<p class="mm-p" style="margin-top:8px"><strong>Proporção sugerida:</strong> 60% papel, 30% tinta, 10% coral. As cores secundárias somadas não devem passar de 5% de qualquer peça.</p>
+<div class="mm-strip" style="background-image:url(../../assets/brand/pattern-geometric.svg)"></div>
+</div>
+</section>
+
+<section class="page" id="p-cor-dont">
+<div class="mm-page">
+<div class="mm-kicker">Cor</div>
+<h2 class="mm-h2">"Não faça"</h2>
+<p class="mm-p">A paleta funciona porque é usada com disciplina. Estes são os erros mais comuns ao aplicá-la.</p>
+<div class="mm-row" style="margin-top:20px">
+<div class="mm-dont"><div style="width:100%;height:70px;border-radius:8px;background:linear-gradient(90deg,#c9a876,#8a6f4a)"></div><div class="mm-dont-label">Não use cores fora da paleta secundária</div></div>
+<div class="mm-dont"><div style="width:70px;height:70px;border-radius:8px;background:var(--brand-coral-light);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-coral.svg" style="width:38px"></div><div class="mm-dont-label">Não aplique sobre fundo de baixo contraste</div></div>
+</div>
+<div class="mm-row">
+<div class="mm-dont"><img src="../../assets/brand/logomark-coral.svg" style="width:56px;filter:hue-rotate(160deg)"><div class="mm-dont-label">Não recolorir o logomark fora da paleta</div></div>
+<div class="mm-dont"><div style="display:flex;gap:4px"><div style="width:22px;height:22px;border-radius:5px;background:var(--brand-coral)"></div><div style="width:22px;height:22px;border-radius:5px;background:var(--accent-teal)"></div><div style="width:22px;height:22px;border-radius:5px;background:var(--accent-gold)"></div><div style="width:22px;height:22px;border-radius:5px;background:var(--info-600)"></div></div><div class="mm-dont-label">Não misture todos os acentos em uma peça só</div></div>
+</div>
+<div class="mm-strip" style="background-image:url(../../assets/brand/pattern-geometric-paper.svg);background-color:var(--ink-900)"></div>
+</div>
+</section>
+
+<section class="page" id="p-logo">
+<div class="mm-page">
+<div class="mm-kicker">03, Logotipo</div>
+<h2 class="mm-h2">Uso do logotipo</h2>
+<p class="mm-p">Selo arredondado (squircle) com um ponto "ao vivo" e uma onda de transmissão: sinal, conexão, conteúdo ao vivo.</p>
+<div class="mm-row" style="align-items:center;margin:20px 0">
+<div style="width:110px;height:110px;border:2px dashed var(--border-default);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-coral.svg" style="width:64px;height:64px"></div>
+<div style="background:var(--ink-900);border-radius:14px;padding:22px 26px;display:flex;align-items:center;gap:12px"><img src="../../assets/brand/logomark-paper.svg" style="width:32px;height:32px"><span style="font-family:var(--font-display);font-weight:800;font-size:21px;color:var(--paper-0)">MONI</span></div>
+<div style="background:var(--surface-card);border:2px solid var(--border-strong);border-radius:14px;padding:22px 26px;display:flex;align-items:center;gap:12px"><img src="../../assets/brand/logomark-ink.svg" style="width:32px;height:32px"><span style="font-family:var(--font-display);font-weight:800;font-size:21px;color:var(--ink-900)">MONI</span></div>
+</div>
+<p class="mm-p"><strong>Clearspace:</strong> altura do ponto ao redor do símbolo. <strong>Tamanho mínimo:</strong> 24px digital, 8mm impresso.</p>
+<p class="mm-p"><strong>Quando usar cada versão:</strong> coral sobre papel ou fundos neutros claros; tinta em impressos de uma cor só; papel (branco) sobre fundos escuros, coral ou fotografia.</p>
+<div class="mm-kicker" style="margin-top:18px">Versões em cor</div>
+<div class="mm-row" style="align-items:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:64px;height:64px;border-radius:16px;background:var(--surface-card);border:1px solid var(--line-100);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-teal.svg" style="width:36px"></div><div class="mm-code">teal, dados/sustentabilidade</div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:64px;height:64px;border-radius:16px;background:var(--surface-card);border:1px solid var(--line-100);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-gold.svg" style="width:36px"></div><div class="mm-code">gold, recompensas/prêmios</div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:64px;height:64px;border-radius:16px;background:var(--surface-card);border:1px solid var(--line-100);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-info.svg" style="width:36px"></div><div class="mm-code">info, comunicados</div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:64px;height:64px;border-radius:16px;background:var(--ink-900);display:flex;align-items:center;justify-content:center"><img src="../../assets/brand/logomark-outline.svg" style="width:36px;filter:invert(1)"></div><div class="mm-code" style="color:var(--ink-500)">outline, marca d'água</div></div>
+</div>
+<p class="mm-p" style="font-size:12px">Cores secundárias no logomark são exceção, não regra: só quando a peça inteira já usa aquele acento (ex: um relatório de impacto ambiental em teal, um card de recompensa em gold).</p>
+<div class="mm-kicker" style="margin-top:22px">Logotipo, "Não faça"</div>
+<div class="mm-row">
+<div class="mm-dont"><img src="../../assets/brand/logomark-coral.svg" style="width:70px;height:40px;transform:scaleX(1.7)"><div class="mm-dont-label">Não estique ou distorça</div></div>
+<div class="mm-dont"><img src="../../assets/brand/logomark-coral.svg" style="width:52px;transform:rotate(180deg)"><div class="mm-dont-label">Não gire ou espelhe</div></div>
+<div class="mm-dont"><img src="../../assets/brand/logomark-coral.svg" style="width:18px"><div class="mm-dont-label">Não use abaixo do tamanho mínimo</div></div>
+</div>
+<div class="mm-strip" style="background-image:url(../../assets/brand/pattern-geometric.svg)"></div>
+</div>
+</section>
+
+<section class="page" id="p-logo-variacoes">
+<div class="mm-page">
+<div class="mm-kicker">Logotipo, explorações</div>
+<h2 class="mm-h2">Variações estudadas</h2>
+<p class="mm-p">Direções exploradas antes de fechar o logomark atual (selo arredondado, item 3). Todas existem como SVG standalone em <span class="mm-code" style="font-size:11px">assets/brand/</span>, prontas para reaproveitar em patterns ou peças alternativas.</p>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px">
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><svg viewBox="0 0 120 56" width="70" height="33" style="color:var(--ink-900)"><circle cx="28" cy="38" r="6" fill="currentColor"/><path d="M39,28 A12,12 0 0,1 42,46" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M45,18 A22,22 0 0,1 50,52" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg><div class="mm-code">1, ondas assimétricas</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><svg viewBox="0 0 120 56" width="70" height="33" style="color:var(--ink-900)"><circle cx="60" cy="46" r="5" fill="currentColor"/><path d="M48,34 A16,16 0 0,1 72,34" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M40,24 A28,28 0 0,1 80,24" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg><div class="mm-code">2, sinal wifi</div></div>
+<div style="border:2px solid var(--brand-coral);border-radius:10px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--brand-coral-light)"><svg viewBox="0 0 120 56" width="70" height="33" style="color:var(--brand-coral)"><rect x="32" y="4" width="48" height="48" rx="14" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="48" cy="38" r="4" fill="currentColor"/><path d="M56,30 A10,10 0 0,1 58,42" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg><div class="mm-code" style="color:var(--brand-coral-dark);font-weight:700">3, selo (escolhido)</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><svg viewBox="0 0 120 56" width="70" height="33" style="color:var(--ink-900)"><circle cx="60" cy="30" r="6" fill="currentColor"/><path d="M60,30 A16,16 0 0,1 38,44" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M60,30 A16,16 0 0,0 82,44" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg><div class="mm-code">4, onda espelhada</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><svg viewBox="0 0 120 56" width="70" height="33" style="color:var(--ink-900)"><circle cx="60" cy="28" r="7" fill="currentColor"/><line x1="60" y1="8" x2="60" y2="14" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="78" y1="14" x2="74" y2="18" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="42" y1="14" x2="46" y2="18" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="84" y1="28" x2="78" y2="28" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="36" y1="28" x2="42" y2="28" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><div class="mm-code">5, burst</div></div>
+</div>
+<p class="mm-p" style="margin-top:16px">A versão 3 (selo arredondado) foi escolhida por funcionar melhor em tamanhos pequenos e por combinar com a linguagem de cantos suaves do resto do sistema.</p>
+</div>
+</section>
+
+<section class="page" id="p-produto">
+<div class="mm-page">
+<div class="mm-kicker">Produto em uso</div>
+<h2 class="mm-h2">App e painel da loja</h2>
+<div style="display:grid;grid-template-columns:1fr 1.4fr;gap:16px;align-items:start;margin-top:6px">
+<img src="../../assets/brand/screenshot-app.png" style="width:100%;border-radius:12px;border:1px solid var(--line-100);display:block">
+<img src="../../assets/brand/screenshot-dashboard.png" style="width:100%;border-radius:12px;border:1px solid var(--line-100);display:block">
+</div>
+<p class="mm-p" style="margin-top:14px">App do consumidor (esquerda) e painel de campanhas do lojista (direita). Mais telas na aba de UI Kits do sistema de design.</p>
+</div>
+</section>
+
+<section class="page" id="p-componentes">
+<div class="mm-page">
+<div class="mm-kicker">Componentes</div>
+<h2 class="mm-h2">Buttons, Icon Buttons e campos de formulário</h2>
+<h3 class="mm-h3">Buttons</h3>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:16px;background:var(--surface-page);border-radius:10px">
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Button" variant="primary" hint-size="140,44">Iniciar campanha</x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Button" variant="secondary" hint-size="120,44">Ver relatório</x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Button" variant="outline" hint-size="110,44">Saiba mais</x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.IconButton" variant="solid" label="Fechar" hint-size="40,40"></x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.IconButton" variant="outline" label="Fechar" hint-size="40,40"></x-import>
+</div>
+<h3 class="mm-h3">Campos de formulário</h3>
+<div style="display:flex;gap:14px;padding:16px;background:var(--surface-page);border-radius:10px;flex-wrap:wrap;align-items:flex-end">
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Input" label="Nome da loja" placeholder="Shopping Riverside" hint-size="180,60"></x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Select" label="Shopping" hint-size="160,60"></x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Checkbox" label="Avisar ao bater a meta" checked="true" hint-size="180,24"></x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Radio" label="Shopping" checked="true" hint-size="90,24"></x-import>
+<x-import component-from-global-scope="LiveHubShoppingDesignSystem_8f0aee.Switch" label="Campanha ativa" checked="true" hint-size="150,26"></x-import>
+</div>
+<p class="mm-p" style="margin-top:14px">Button, IconButton, Input, Select, Checkbox, Radio e Switch, renderizados ao vivo a partir do próprio sistema de design. Conjunto completo na aba de Componentes.</p>
+<h3 class="mm-h3">Diálogos e overlays</h3>
+<p class="mm-p">Modal centralizado, contido dentro da própria tela (não fixo à janela): fundo escurecido, cartão com título, corpo e ações no rodapé.</p>
+<div style="display:flex;justify-content:center;padding:16px;background:var(--surface-page);border-radius:10px">
+<div style="width:260px;background:var(--surface-card);border:2px solid var(--border-strong);border-radius:var(--radius-lg);box-shadow:var(--shadow-flat-lg);padding:var(--space-6)">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-family:var(--font-display);font-weight:700;font-size:15px">Aprovar envio?</span><span style="color:var(--ink-500)">×</span></div>
+<div style="font-size:12px;color:var(--ink-700);margin-bottom:14px">Isso paga R$ 5 ao cliente e publica o vídeo.</div>
+<div style="display:flex;gap:8px;justify-content:flex-end"><span style="font-size:12px;font-weight:700;color:var(--ink-700)">Cancelar</span><span style="background:var(--brand-coral);color:#fff;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700">Aprovar</span></div>
+</div>
+</div>
+<p class="mm-p" style="margin-top:10px;font-size:12px">Ver Card, Tabs, Dialog na aba de Componentes para a versão interativa.</p>
+</div>
+</section>
+
+<section class="page" id="p-espacamento">
+<div class="mm-page">
+<div class="mm-kicker">07, Espaçamento</div>
+<h2 class="mm-h2">Ritmo e escala</h2>
+<p class="mm-p">Espaçamento em múltiplos de 4px (tokens space-1 a space-8). Consistência de gap entre elementos é o que dá o acabamento de "produto sério".</p>
+<div style="display:flex;gap:16px;margin-top:14px;flex-wrap:wrap">
+<div style="background:var(--surface-card);border:2px solid var(--border-strong);border-radius:12px;padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);width:220px">
+<div style="font-family:var(--font-display);font-weight:700;font-size:16px">Compra do Fim de Semana</div>
+<div style="color:var(--ink-500);font-size:11px">card: gap space-3, padding space-6</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:var(--space-2);width:200px">
+<div style="background:var(--surface-card);border:1px solid var(--line-100);border-radius:8px;padding:var(--space-3) var(--space-4);font-size:11px">Diego R. — Loja Zara</div>
+<div style="background:var(--surface-card);border:1px solid var(--line-100);border-radius:8px;padding:var(--space-3) var(--space-4);font-size:11px">Carla M. — Loja Nike</div>
+<div style="font-size:10px;color:var(--ink-500)">lista: gap space-2</div>
+</div>
+</div>
+<div style="display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;align-items:flex-start">
+<div style="display:flex;gap:var(--space-2);align-items:center">
+<div style="background:var(--brand-coral);color:#fff;border-radius:999px;padding:var(--space-2) var(--space-4);font-size:12px;font-weight:700">Aprovar</div>
+<div style="background:var(--surface-card);border:2px solid var(--border-strong);border-radius:999px;padding:var(--space-2) var(--space-4);font-size:12px;font-weight:700">Recusar</div>
+</div>
+<div style="font-size:10px;color:var(--ink-500)">grupo de botões: gap space-2</div>
+</div>
+<p class="mm-p" style="margin-top:16px"><strong>Formulários:</strong> gap space-5 entre campos, padding space-8 no container, space-1 entre rótulo e campo. Ver "Espaçamento em uso" na aba de tokens para os 4 padrões completos.</p>
+</div>
+</section>
+
+<section class="page" id="p-tipografia">
+<div class="mm-page">
+<div class="mm-kicker">04, Tipografia</div>
+<h2 class="mm-h2">Famílias e uso</h2>
+
+<div style="border-top:2px solid var(--ink-900);padding-top:14px;margin-top:6px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="mm-kicker" style="margin:0">Display</span><span class="mm-code">peso 700 a 800</span></div>
+<div style="font-family:var(--font-display);font-weight:800;font-size:44px;color:var(--ink-900);letter-spacing:-0.02em;line-height:1.15;margin-top:4px">Bricolage Grotesque</div>
+<div style="font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--ink-500);margin-top:4px">AaBbCcDdEeFfGgHhIiJj 0123456789</div>
+<ul class="mm-p" style="margin:8px 0 0 18px;padding:0">
+<li>Use em: títulos, números grandes, headlines de campanha.</li>
+<li>Nunca abaixo de 20px. Tracking levemente negativo (-0.02em) em tamanhos grandes.</li>
+<li>Google Fonts, substituição sinalizada; nenhuma fonte de marca foi fornecida.</li>
+</ul>
+</div>
+
+<div style="border-top:2px solid var(--ink-900);padding-top:14px;margin-top:20px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="mm-kicker" style="margin:0">Texto</span><span class="mm-code">pesos 400 a 800</span></div>
+<div style="display:flex;gap:18px;align-items:baseline;margin-top:4px">
+<span style="font-family:var(--font-body);font-weight:400;font-size:24px;color:var(--ink-900)">Inter Regular</span>
+<span style="font-family:var(--font-body);font-weight:700;font-size:24px;color:var(--ink-900)">Inter Bold</span>
+</div>
+<div style="font-family:var(--font-body);font-weight:400;font-size:13px;color:var(--ink-500);margin-top:4px">AaBbCcDdEeFfGgHhIiJj 0123456789</div>
+<ul class="mm-p" style="margin:8px 0 0 18px;padding:0">
+<li>Use em: parágrafos, rótulos de UI, botões, formulários.</li>
+<li>Nunca abaixo de 12px. Corpo de texto confortável em 14 a 16px, line-height 1.5 a 1.65.</li>
+<li>Bold só para ênfase e rótulos, não para blocos longos de texto.</li>
+</ul>
+</div>
+
+<div style="border-top:2px solid var(--ink-900);padding-top:14px;margin-top:20px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="mm-kicker" style="margin:0">Mono</span><span class="mm-code">peso 400 a 500</span></div>
+<div style="font-family:var(--font-mono);font-size:20px;color:var(--ink-900);margin-top:4px">JetBrains Mono</div>
+<ul class="mm-p" style="margin:8px 0 0 18px;padding:0">
+<li>Use em: códigos promocionais, IDs de pedido, valores em tabelas técnicas.</li>
+<li>Nunca em títulos, botões ou textos longos.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="page" id="p-foto">
+<div class="mm-page">
+<div class="mm-kicker">05, Fotografia</div>
+<h2 class="mm-h2">Estilo de imagem</h2>
+<p class="mm-p">Espontânea, quente, gente real comprando e gravando no estúdio MONI, nunca still de banco de imagens corporativo.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px">
+<image-slot id="photo-style-1" shape="rounded" radius="12" placeholder="Cliente gravando na loja" src="../../assets/brand/photo-booth-exterior-review.png" style="width:100%;height:220px"></image-slot>
+<image-slot id="photo-style-2" shape="rounded" radius="12" placeholder="Detalhe do produto comprado" src="../../assets/brand/photo-booth-sneaker-reveal.png" style="width:100%;height:220px"></image-slot>
+<image-slot id="photo-style-3" shape="rounded" radius="12" placeholder="Movimento no shopping" src="../../assets/brand/photo-shoppers-excited.png" style="width:100%;height:220px"></image-slot>
+</div>
+<p class="mm-p" style="margin-top:16px"><strong>Evite:</strong> modelos posando, luz de estúdio, fundo infinito branco, preto e branco, filtros artificiais.</p>
+</div>
+</section>
+
+<section class="page" id="p-patterns">
+<div class="mm-page">
+<div class="mm-kicker">06, Patterns</div>
+<h2 class="mm-h2">Patterns e textura</h2>
+<div class="mm-row" style="margin-top:14px">
+<div style="flex:1;height:200px;border-radius:10px;background:var(--paper-50);background-image:url(../../assets/brand/pattern-geometric.svg);background-size:65px"></div>
+<div style="flex:1;height:200px;border-radius:10px;background:var(--ink-900);background-image:url(../../assets/brand/pattern-organic-dark.svg);background-size:85px"></div>
+</div>
+<p class="mm-p" style="margin-top:14px"><strong>Geométrico:</strong> grade modular do símbolo, para capas, cards e apresentações.</p>
+<p class="mm-p"><strong>Orgânico:</strong> escalas e rotações variadas, misturando teal e dourado, para stories e peças de estúdio.</p>
+<div class="mm-row" style="margin-top:6px">
+<div style="position:relative;flex:1;height:120px;border-radius:10px;overflow:hidden;background:var(--brand-coral)"><img src="../../assets/brand/texture-grain.svg" style="position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:overlay;opacity:0.5"></div>
+</div>
+<p class="mm-p"><strong>Textura granulada:</strong> overlay sutil (mix-blend-mode: overlay, opacidade 0.3 a 0.5) sobre blocos de cor, para tirar o aspecto chapado perfeito demais.</p>
+</div>
+</section>
+
+<section class="page" id="p-pecas">
+<div class="mm-page">
+<div class="mm-kicker">08, Peças gráficas</div>
+<h2 class="mm-h2">Banners e aplicações</h2>
+<p class="mm-p">Capturas reais dos templates prontos do sistema de design.</p>
+<img src="../../assets/brand/screenshot-cta-banner.png" style="width:100%;border-radius:10px;border:1px solid var(--line-100);margin-top:8px;display:block">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+<img src="../../assets/brand/screenshot-post-social.png" style="width:100%;border-radius:10px;border:1px solid var(--line-100);display:block">
+<img src="../../assets/brand/screenshot-sinalizacao.png" style="width:100%;border-radius:10px;border:1px solid var(--line-100);display:block;object-fit:cover">
+</div>
+<p class="mm-p" style="margin-top:14px">CTA banner, post social e sinalização de estúdio. Mais templates na aba de Templates do sistema de design.</p>
+</div>
+</section>
+
+<section class="page" id="p-site">
+<div class="mm-page">
+<div class="mm-kicker">09, Site institucional</div>
+<h2 class="mm-h2">A marca em uso no site</h2>
+<p class="mm-p">Print do topo da landing page: hero com manifesto ao fundo.</p>
+<img src="../../assets/brand/site-screenshot-hero.png" style="width:100%;border-radius:10px;border:1px solid var(--line-100);margin-top:10px;display:block">
+</div>
+</section>
+
+<section class="page" id="p-svg">
+<div class="mm-page">
+<div class="mm-kicker">10, Elementos prontos</div>
+<h2 class="mm-h2">Arquivos SVG para uso imediato</h2>
+<p class="mm-p">Todo elemento gráfico da marca existe como SVG vetorial, pronto para copiar e usar em qualquer peça, em qualquer tamanho, sem perda de qualidade.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px">
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logomark-coral.svg" style="width:40px;height:40px"><div class="mm-code" style="text-align:center">logomark-coral.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--ink-900)"><img src="../../assets/brand/logomark-paper.svg" style="width:40px;height:40px"><div class="mm-code" style="text-align:center;color:var(--paper-100)">logomark-paper.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logomark-ink.svg" style="width:40px;height:40px"><div class="mm-code" style="text-align:center">logomark-ink.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--ink-900)"><div style="position:relative;width:40px;height:40px;overflow:hidden;border-radius:6px"><img src="../../assets/brand/texture-grain.svg" style="position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:overlay;opacity:0.6"></div><div class="mm-code" style="text-align:center;color:var(--paper-100)">texture-grain.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:40px;height:40px;background-image:url(../../assets/brand/pattern-geometric.svg);background-size:20px;border-radius:6px"></div><div class="mm-code" style="text-align:center">pattern-geometric.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--ink-900)"><div style="width:40px;height:40px;background-image:url(../../assets/brand/pattern-geometric-paper.svg);background-size:20px;border-radius:6px"></div><div class="mm-code" style="text-align:center;color:var(--paper-100)">pattern-geometric-paper.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:40px;height:40px;background-image:url(../../assets/brand/pattern-organic.svg);background-size:30px;border-radius:6px"></div><div class="mm-code" style="text-align:center">pattern-organic.svg</div></div>
+<div style="border:1px solid var(--line-100);border-radius:10px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--ink-900)"><div style="width:40px;height:40px;background-image:url(../../assets/brand/pattern-organic-dark.svg);background-size:30px;border-radius:6px"></div><div class="mm-code" style="text-align:center;color:var(--paper-100)">pattern-organic-dark.svg</div></div>
+</div>
+<p class="mm-p" style="margin-top:14px">Todos em <span class="mm-code" style="font-size:11px">assets/brand/</span>.</p>
+</div>
+</section>
+
+<section class="page" id="p-voz">
+<div class="mm-page" style="justify-content:center">
+<div class="mm-kicker">11, Voz e tom</div>
+<h2 class="mm-h2">Como escrevemos</h2>
+<p class="mm-p" style="font-size:15px;max-width:480px">Direta, simples, nunca corporativa. "Você" para consumidor e lojista. Frases curtas, voz ativa, números em vez de adjetivos. Sem emoji. Caixa alta só em rótulos curtos.</p>
+<div style="border-left:3px solid var(--brand-coral);padding-left:18px;margin:20px 0">
+<p class="mm-p" style="font-style:italic;font-size:17px;color:var(--ink-900);max-width:480px">"Aprove o vídeo. Nós cuidamos do pagamento."</p>
+<p class="mm-p" style="font-size:13px;color:var(--ink-500);max-width:480px">Não: "Assim que você tiver revisado o conteúdo, poderá prosseguir com a aprovação."</p>
+</div>
+</div>
+</section>
+
+<section class="page" id="p-campo">
+<div class="mm-page">
+<div class="mm-kicker">12, Peças em campo</div>
+<h2 class="mm-h2">A marca no shopping</h2>
+<p class="mm-p">Fotos reais do estúdio de gravação MONI em operação.</p>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+<image-slot id="app-preview-1" shape="rounded" radius="12" placeholder="Foto do estúdio em uso" src="../../assets/brand/photo-shoppers-approaching-booth.png" style="width:100%;aspect-ratio:16/9;max-height:290px"></image-slot>
+<image-slot id="app-preview-2" shape="rounded" radius="12" placeholder="Foto da sinalização no estúdio" src="../../assets/brand/photo-booth-exterior-review.png" style="width:100%;aspect-ratio:3/2;max-height:290px"></image-slot>
+</div>
+<p class="mm-p" style="margin-top:14px">Mais templates prontos na aba de Templates do sistema de design: story, capa de vídeo, card de depoimento e slide de apresentação.</p>
+</div>
+</section>
+
+<section class="page" id="p-contato">
+<div class="mm-page" style="justify-content:center;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background-image:url(../../assets/brand/pattern-geometric.svg);background-size:100px;opacity:0.15"></div>
+<div style="position:relative">
+<img src="../../assets/brand/logomark-coral.svg" style="width:46px;height:46px;margin-bottom:24px">
+<div class="mm-kicker">Contato</div>
+<div style="font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--ink-900);margin-bottom:10px">Design MONI</div>
+<div class="mm-p" style="font-size:16px">design@moni.shopping</div>
+<p class="mm-p" style="margin-top:28px;font-style:italic;color:var(--ink-500)">Este é um sistema de identidade original, construído a partir da descrição da empresa. Nenhum logotipo ou material de marca pré-existente foi fornecido pela MONI.</p>
+</div>
+</div>
+</section>
+
+</doc-page>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

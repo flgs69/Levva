@@ -1,0 +1,10 @@
+.DS_Store
+.obsidian/
+.claude/
+.secrets/
+.private/
+tmp/
+.env
+.env.*
+*.pem
+*.key

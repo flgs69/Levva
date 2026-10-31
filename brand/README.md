@@ -1,57 +1,94 @@
-> Design system completo no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
-
 # Levva
 
-Levva vem de três palavras que cabem no nome: **levar**, **leve** e **elevar**. A marca promete que o próximo passo é mais leve do que parece e que a Levva vai junto. A referência de espírito é a MONI: nome curto e sonoro, visual limpo de fintech, tom próximo, sem cara de banco.
+**Quem compra, conta.**
 
-Assinatura: **Mais leve, mais alto.**
+A Levva instala estúdios compactos dentro de shoppings e transforma compras reais em vídeos prontos para as lojas usarem, e cada gravação em aprendizado sobre como os clientes enxergam os produtos. É o nome atual do projeto que antes se chamou LiveHub e MONI. Este sistema herda a base visual do design system MONI e troca o nome, o símbolo e a animação.
 
-## A ideia do símbolo
+Brand book visual: `brandbook.html` nesta pasta, publicado em https://claude.ai/artifact/KgTwNiUxqhd6HtEUdrATyw. Design system no Claude Design: https://claude.ai/artifact/RLSjCpm9DYKYEz2cofLRq1
 
-O "vv" do meio do nome, virado para cima, vira dois chevrons: o sinal de subir de nível. O chevron de cima é âmbar (`lift`, o impulso); o de baixo é branco (a base). Os dois ficam num quadrado verde de cantos generosos (`radius-lg`, 16 em 64). A palavra "levva" é desenhada em traço único, de pontas redondas, com a mesma espessura dos chevrons, para que símbolo e nome pareçam a mesma mão.
+## O que a Levva faz
+
+1. O cliente compra numa loja participante e recebe o convite.
+2. Entende formato, incentivo e uso de imagem, e só então autoriza.
+3. Grava 30 segundos no estúdio: o produto em uso ou por que comprou.
+4. A loja recebe o vídeo final aprovado e um relatório do que o público disse.
+
+Quem paga é a loja ou a marca. O consumidor participa em troca de um incentivo. O shopping ganha uma experiência que liga o espaço físico ao digital.
+
+**Posicionamento:** a infraestrutura de conteúdo e inteligência do varejo físico, instalada onde a compra acontece.
+
+**Promessa para a loja:** transformamos clientes reais em conteúdo pronto para a sua marca, e cada gravação em aprendizado sobre como o seu produto é percebido.
+
+**Não prometemos:** aumento garantido de vendas, pesquisa estatisticamente representativa, automação completa de publicação, volume antes de medir capacidade, uso de dados fora do consentimento.
 
 ## Voz
 
-- Fala como gente: frases curtas, segunda pessoa ("você"), verbos de movimento (levar, subir, avançar).
-- Mostra o número real antes do adjetivo: "Você guardou R$ 320 este mês", não "Resultados incríveis!".
-- Faça: ser direto, comemorar progresso pequeno, explicar termos financeiros em uma linha.
-- Não faça: urgência falsa, jargão de banco, letras maiúsculas para gritar, mais de um ponto de exclamação por tela, emoji como enfeite.
+Direta, real, enérgica, responsável. "Você" para o consumidor e para o lojista.
 
-## Cores
-
-A marca vive em três cores: o verde `levva`, o âmbar `lift` e o quase-preto `ink`. O resto é neutro de apoio.
-
-- `levva` é a cor que as pessoas reconhecem: botão principal, links, o símbolo. Texto sobre ele é `on-levva`.
-- `lift` aparece pouco e sempre como impulso: o chevron de cima, uma conquista, um destaque numa tela. Nunca serve de texto sobre fundo claro; texto sobre `lift` é `ink`.
-- `ink` é o texto e também o fundo escuro da marca (capas, rodapés, telas de celebração).
-- `surface` é o fundo padrão, um verde quase branco; `surface-raised` (branco) separa cartões.
-- `levva-soft` tinge chips e estados selecionados atrás de texto `levva` ou `ink`.
-- `danger` só para erro e valor negativo.
-
-Proporção sugerida numa peça: 60% `surface`, 25% `levva` ou `ink`, 10% `levva-soft`, 5% `lift`.
-
-## Tipografia
-
-Duas famílias do Google Fonts: **Bricolage Grotesque** (`display`) para títulos curtos, com personalidade, e **Instrument Sans** (`sans`) para todo o resto. Valores usam o estilo `figure` com algarismos tabulares, para que colunas de dinheiro alinhem. Carregue assim:
-
-```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400..700&display=swap">
-```
-
-## Forma e espaço
-
-- Grade de 8px (`space-2` a `space-8`), margem lateral de `space-4` no celular.
-- Cantos generosos: `radius-lg` em cartões, `radius-full` em botões de ação e pílulas, `radius-sm` em campos.
-- Profundidade por cor, não por sombra: um cartão `surface-raised` sobre `surface` já se separa.
-
-## Iconografia
-
-Ícones em traço único, pontas e junções redondas, espessura proporcional à do logo (cerca de 1/9 da altura do ícone), cor `ink` ou `levva`. O chevron para cima é o motivo gráfico da marca: pode repetir em padrões (subindo em diagonal), em indicadores de progresso e em estados de conquista. Não usar ilustrações com rostos nem mascotes.
+- Consumidor: "Tem 30 segundos? Mostra sua compra e ganha R$ 5 de volta."
+- Lojista: "Veja quais vídeos trouxeram mais gente para a loja esta semana."
+- Faça: diga quanto tempo leva e o que a pessoa ganha; número antes do adjetivo ("1.204 vídeos este mês"); caixa de frase; uso de imagem explicado em uma linha.
+- Não faça: jargão de agência, urgência falsa, mais de um ponto de exclamação por tela, emoji na interface, roteiro que pede elogio.
+- CAIXA ALTA só em selos curtos: AO VIVO, GRAVANDO, EM ANÁLISE, APROVADO.
 
 ## Logo
 
-Use `levva-lockup.svg` como assinatura principal, `levva-mark.svg` quando o espaço for quadrado (app, avatar, favicon) e `levva-wordmark.svg` / `levva-wordmark-reverse.svg` quando o símbolo já aparece por perto. Regras e tamanhos mínimos em Logos.
+O símbolo é um visor de câmera: dois cantos de enquadramento e um ponto coral de gravação no centro. O canto de baixo é um L, de Levva. A palavra "levva" vem em Bricolage Grotesque ExtraBold, caixa baixa.
 
-## Status desta versão
+- Construção em grade de 100: traço dos cantos 9, raio 16 (`radius-lg`), ponto com diâmetro 24 no centro exato. Na assinatura, a altura do "l" é 76 e o espaço entre símbolo e palavra é 22.
+- Área de proteção: o diâmetro do ponto (24 em 100) em volta de qualquer versão.
+- Tamanho mínimo: símbolo 24 px ou 8 mm; assinatura 96 px ou 25 mm.
+- Fundos: principal sobre `paper`; negativa (`levva-lockup-paper.svg`) sobre `ink` ou foto escura; monocromática tinta sobre `coral` e `gold`.
+- Não faça: distorcer, recolorir, girar, ponto coral sobre coral, mover o ponto, sombra ou efeito.
 
-Primeira versão, criada do zero com a MONI como referência de conceito (não há arquivos da MONI no repositório). O segmento exato da Levva ainda não foi definido; a voz e as cores partem de uma fintech de uso pessoal. Próximos passos: tema escuro, componentes (botão, campo, cartão de saldo) e peças de aplicação.
+Os arquivos e o uso de cada um estão no grupo Logos.
+
+## Animação da logo
+
+"Enquadra, grava, assina." Os cantos entram pelas diagonais (0 a 520 ms), o ponto acende com um leve estouro (380 a 720 ms), as letras sobem uma a uma a cada 70 ms (560 a 1300 ms) e o ponto pisca duas vezes como luz de gravação (900 a 2100 ms). Total de 2,1 s (`duration-logo`), curva ease-snap `cubic-bezier(.2, .8, .2, 1)`, sem quique.
+
+Toca uma vez e para; nunca em loop na interface. Com "reduzir movimento" ativo, mostre a logo parada. Usos: abertura e fechamento de vídeos, carregamento do app, telas do estúdio, início de apresentações. Vídeos e SVG animado no grupo Movimento; o card LogoAnimation mostra a animação ao vivo.
+
+## Cores
+
+Uma única cor forte, o coral, usada com moderação para a ação principal de cada tela e para o estado de gravação. A base é papel quente e tinta quase preta, nunca branco ou preto puros.
+
+- `coral` (#FF4433): a cor da marca. Texto sobre coral é `on-coral` (tinta, 5,4:1). Coral como texto só em 24 px ou mais; para texto pequeno use `coral-ink`.
+- `ink` (#1A1210): texto e a borda assinatura de 2 px. `paper` (#FBF3EA): fundo.
+- `teal` para dados e aprovado, `gold` para recompensa e cashback (só preenchimento, texto em tinta).
+- Proporção numa peça: 60% papel, 25% tinta, 10% coral, 5% acentos.
+- Tema escuro: `paper` vira tinta e `ink` vira papel; o coral não muda.
+
+## Tipografia
+
+Bricolage Grotesque (`display`) para títulos curtos e números grandes, Inter (`body`) para toda a interface, JetBrains Mono (`mono`) para tempo de gravação e IDs. Todas do Google Fonts:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+```
+
+## Elementos gráficos
+
+- Borda de 2 px em tinta (`border-width`) em cartões, campos, botões contornados e modais.
+- Sombra chapada sem desfoque (`shadow-flat-sm/md/lg`). A suave (`shadow-soft`) só em tabelas e superfícies densas.
+- Moldura de visor: os dois cantos do símbolo enquadram títulos, fotos e telas, sempre na diagonal canto inferior esquerdo e superior direito.
+- Padrão de visores: o símbolo em grade, tinta sobre coral ou papel sobre tinta. Nunca atrás de texto pequeno.
+- Selo REC: pílula em tinta com ponto coral piscando e tempo em mono ("REC 00:30").
+- Cantos: `radius-lg` em cartões, `radius-pill` em botões e selos, nunca zero na interface.
+- Ícones: traço de 2 px, pontas redondas. Sem emoji como ícone.
+- Movimento de interface: 120 a 200 ms, ease-snap. Hover escurece 6% e sobe 1 px; pressionado reduz para 97%.
+
+## Fotografia
+
+Gente real comprando e gravando no estúdio do shopping, luz do ambiente, enquadramento de celular. Sem banco de imagens, sem modelo posando, sem filtro pesado. Menores só com autorização dos responsáveis.
+
+## Herança MONI
+
+Mantidos: paleta, tipografia, bordas de 2 px, sombra chapada, pílulas, voz direta. Novos: nome, símbolo de visor, palavra em caixa baixa, animação da logo, moldura e padrão de visores, `coral-ink` e tons de sucesso e atenção ajustados para contraste. O design system MONI original, com componentes e templates, continua no repositório Levva, na pasta `Design System`.
+
+## Arquivos
+
+- `brandbook.html`: brand book completo (abra no navegador).
+- `logos/`: 12 versões em SVG, ver `logos/README.md`.
+- `animacao/`: vídeos MP4 1920 x 1080, SVG animado e página HTML da animação.
+- `tokens.json` e `tokens.css`: cores (claro e escuro), tipografia, espaço, raios, sombras, bordas, durações.

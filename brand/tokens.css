@@ -1,0 +1,73 @@
+/* Levva: tokens gerados de tokens.json */
+:root, [data-theme="light"] {
+  --paper: #fbf3ea;
+  --paper-raised: #fffaf5;
+  --paper-sunken: #f3e8db;
+  --line: #e8dbc9;
+  --ink: #1a1210;
+  --ink-muted: #6b5f5b;
+  --coral: #ff4433;
+  --coral-ink: #c42a19;
+  --coral-soft: #ffe4df;
+  --on-coral: #1a1210;
+  --teal: #0f6e5c;
+  --teal-soft: #dcefe9;
+  --gold: #f2b705;
+  --success: #1a7a43;
+  --warning: #95590a;
+  --danger: #c22a3e;
+  --info: #2461c9;
+  --focus: var(--coral);
+  --shadow-flat-sm: 2px 2px 0 #1a1210;
+  --shadow-flat-md: 4px 4px 0 #1a1210;
+  --shadow-flat-lg: 6px 6px 0 #1a1210;
+  --shadow-soft: 0 4px 12px rgba(26, 18, 16, 0.10);
+}
+[data-theme="dark"] {
+  --paper: #1a1210;
+  --paper-raised: #2a201d;
+  --paper-sunken: #120c0a;
+  --line: #3a2f2c;
+  --ink: #fbf3ea;
+  --ink-muted: #a89c97;
+  --coral-ink: #ff6a5a;
+  --coral-soft: #3d1a14;
+  --teal: #4cc2a6;
+  --teal-soft: #12302a;
+  --success: #4fc47f;
+  --warning: #f0a940;
+  --danger: #ff6b7d;
+  --info: #6f9ef0;
+  --shadow-flat-sm: 2px 2px 0 #000000;
+  --shadow-flat-md: 4px 4px 0 #000000;
+  --shadow-flat-lg: 6px 6px 0 #000000;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+  --border-width: 2px;
+  --border-width-hairline: 1px;
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-logo: 2100ms;
+  --ease-snap: cubic-bezier(.2, .8, .2, 1);
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
